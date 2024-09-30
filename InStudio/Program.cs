@@ -1,4 +1,5 @@
 using InStudio.Data;
+using InStudio.Data.Models;
 using InStudio.Extensions;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;

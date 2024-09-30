@@ -4247,11 +4247,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\InStudio\\InStudio.Data\\InStudio.Data.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Data\\InStudio.Data.csproj",
       "projectName": "InStudio.Data",
-      "projectPath": "C:\\Users\\User\\source\\repos\\InStudio\\InStudio.Data\\InStudio.Data.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Data\\InStudio.Data.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\InStudio\\InStudio.Data\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
