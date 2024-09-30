@@ -1,0 +1,14 @@
+C:\Users\User\source\repos\InStudio\InStudio.Data\obj\Debug\net8.0\InStudio.Data.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\InStudio\InStudio.Data\obj\Debug\net8.0\InStudio.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\InStudio\InStudio.Data\obj\Debug\net8.0\InStudio.Data.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\InStudio\InStudio.Data\obj\Debug\net8.0\InStudio.Data.AssemblyInfo.cs
+C:\Users\User\source\repos\InStudio\InStudio.Data\obj\Debug\net8.0\InStudio.Data.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\InStudio\InStudio.Data\bin\Debug\net8.0\InStudio.Data.deps.json
+C:\Users\User\source\repos\InStudio\InStudio.Data\bin\Debug\net8.0\InStudio.Data.runtimeconfig.json
+C:\Users\User\source\repos\InStudio\InStudio.Data\bin\Debug\net8.0\InStudio.Data.dll
+C:\Users\User\source\repos\InStudio\InStudio.Data\bin\Debug\net8.0\InStudio.Data.pdb
+C:\Users\User\source\repos\InStudio\InStudio.Data\obj\Debug\net8.0\InStudio.Data.dll
+C:\Users\User\source\repos\InStudio\InStudio.Data\obj\Debug\net8.0\refint\InStudio.Data.dll
+C:\Users\User\source\repos\InStudio\InStudio.Data\obj\Debug\net8.0\InStudio.Data.pdb
+C:\Users\User\source\repos\InStudio\InStudio.Data\obj\Debug\net8.0\InStudio.Data.genruntimeconfig.cache
+C:\Users\User\source\repos\InStudio\InStudio.Data\obj\Debug\net8.0\ref\InStudio.Data.dll
