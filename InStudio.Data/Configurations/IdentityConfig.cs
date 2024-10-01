@@ -12,7 +12,7 @@ namespace InStudio.Data.Configurations
 {
     public class IdentityConfig : IEntityTypeConfiguration<User>
     {
-        public void Configure(EntityTypeBuilder<User> builder)
+        public void Configure(EntityTypeBuilder<User> entity)
         {
         }
     }

@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\InStudio.Data\InStudio.Data.csproj" />
+    <ProjectReference Include="..\InStudio.Services\InStudio.Services.csproj" />
   </ItemGroup>
 
 </Project>
