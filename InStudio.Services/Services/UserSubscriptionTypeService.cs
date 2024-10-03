@@ -100,29 +100,20 @@ namespace InStudio.Services.Services
             await _userSubscriptionTypeRepository.SaveChangesAsync();
         }
 
-        public async Task<PagedReadOnlyCollection<FilterUserSubscriptionTypeDto>> GetSubscriptionTypeListAsync(
-            FilterUserSubscriptionTypeDto filterDto,
+        public async Task<PagedReadOnlyCollection<UserSubscriptionTypeFilterDto>> GetSubscriptionTypeListAsync(
+            UserSubscriptionTypeFilterDto filterDto,
             PageableParams pagingParams,
             SortParameter sortParameters)
-        {
-            if (filterDto == null)
-                throw new ArgumentNullException(nameof(filterDto));
-
-            if (pagingParams == null)
-                throw new ArgumentNullException(nameof(pagingParams));
-
-            if (sortParameters == null)
-                throw new ArgumentNullException(nameof(sortParameters));
-
+        {          
             var filter = CreateFilter(filterDto);
 
-            return await _userSubscriptionTypeRepository.GetPagedWithFilterAndProjectToAsync<FilterUserSubscriptionTypeDto>(
+            return await _userSubscriptionTypeRepository.GetPagedWithFilterAndProjectToAsync<UserSubscriptionTypeFilterDto>(
                 filter,
                 pagingParams,
                 sortParameters);
         }
 
-        private Expression<Func<UserSubscriptionType, bool>> CreateFilter(FilterUserSubscriptionTypeDto filterDto)
+        private Expression<Func<UserSubscriptionType, bool>> CreateFilter(UserSubscriptionTypeFilterDto filterDto)
         {
             return x =>
                 (string.IsNullOrEmpty(filterDto.Title) || x.Title.Contains(filterDto.Title)) &&

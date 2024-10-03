@@ -1,4 +1,4 @@
-﻿namespace InStudio.Filters
+﻿namespace InStudio.Filters.Requests
 {
     public sealed record SearchUserSubscriptionTypeRequest
     {

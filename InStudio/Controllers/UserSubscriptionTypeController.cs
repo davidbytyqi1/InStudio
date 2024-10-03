@@ -1,6 +1,6 @@
 ﻿using InStudio.Attributes;
 using InStudio.Extensions;
-using InStudio.Filters;
+using InStudio.Filters.Requests;
 using InStudio.Services.Dtos.UserSubscriptionType;
 using InStudio.Services.Services.Interfaces;
 using Mapster;
@@ -89,11 +89,11 @@ namespace InStudio.Controllers
         public async Task<IActionResult> GetSubscriptionTypes([FromQuery] SearchUserSubscriptionTypeRequest model)
         {
             var subscriptions = await _userSubscriptionTypeService.GetSubscriptionTypeListAsync(
-                model.Adapt<FilterUserSubscriptionTypeDto>(),
+                model.Adapt<UserSubscriptionTypeFilterDto>(),
                 _httpContextAccessor.GetPageableParams(),
-                _httpContextAccessor.GetSortParams<FilterUserSubscriptionTypeDto>());
+                _httpContextAccessor.GetSortParams<SearchUserSubscriptionTypeResponse>());
 
-            return subscriptions.TotalCount > 0 ? new OkObjectResult(subscriptions) : new NoContentResult();
+            return subscriptions.TotalCount > 0 ? new OkObjectResult(subscriptions.Adapt<SearchUserSubscriptionTypeResponse>()) : new NoContentResult();
         }
     }
 }

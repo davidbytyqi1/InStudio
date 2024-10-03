@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InStudio.Services.Dtos.UserSubscriptionType
 {
-    public sealed record FilterUserSubscriptionTypeDto
+    public sealed record UserSubscriptionTypeFilterDto
     {
         public string? Title { get; init; }
         public decimal? MinPrice { get; init; }
