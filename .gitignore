@@ -440,3 +440,16 @@ bld/
 msbuild.log
 msbuild.err
 msbuild.wrn
+
+
+# Ignore Visual Studio files
+.vs/
+*.suo
+
+# Ignore build output
+bin/
+obj/
+
+# Ignore cache files
+*.cache
+
