@@ -3,12 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\Project\\InStudio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{540F4406-A940-4EF0-AD47-980ED7894A29}|InStudio\\InStudio.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio\\controllers\\usersubscriptiontypecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{540F4406-A940-4EF0-AD47-980ED7894A29}|InStudio\\InStudio.csproj|solutionrelative:instudio\\controllers\\usersubscriptiontypecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Data\\Migrations\\20241003183206_Add_Project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:InStudio.Data\\Migrations\\20241003183206_Add_Project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8E74E0B-364C-476D-A1D9-03C43BB06F6B}|InStudio.Services\\InStudio.Services.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio.services\\dtos\\usersubscriptiontype\\usersubscriptiontypefilterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E74E0B-364C-476D-A1D9-03C43BB06F6B}|InStudio.Services\\InStudio.Services.csproj|solutionrelative:instudio.services\\dtos\\usersubscriptiontype\\usersubscriptiontypefilterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B67C6523-A654-41CC-A9A7-20FF95E5E3BD}|InStudio.Data\\InStudio.Data.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio.data\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B67C6523-A654-41CC-A9A7-20FF95E5E3BD}|InStudio.Data\\InStudio.Data.csproj|solutionrelative:instudio.data\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C6523-A654-41CC-A9A7-20FF95E5E3BD}|InStudio.Data\\InStudio.Data.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio.data\\configurations\\identityconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B67C6523-A654-41CC-A9A7-20FF95E5E3BD}|InStudio.Data\\InStudio.Data.csproj|solutionrelative:instudio.data\\configurations\\identityconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C6523-A654-41CC-A9A7-20FF95E5E3BD}|InStudio.Data\\InStudio.Data.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio.data\\configurations\\designcategoryconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B67C6523-A654-41CC-A9A7-20FF95E5E3BD}|InStudio.Data\\InStudio.Data.csproj|solutionrelative:instudio.data\\configurations\\designcategoryconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C6523-A654-41CC-A9A7-20FF95E5E3BD}|InStudio.Data\\InStudio.Data.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio.data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B67C6523-A654-41CC-A9A7-20FF95E5E3BD}|InStudio.Data\\InStudio.Data.csproj|solutionrelative:instudio.data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C6523-A654-41CC-A9A7-20FF95E5E3BD}|InStudio.Data\\InStudio.Data.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio.data\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B67C6523-A654-41CC-A9A7-20FF95E5E3BD}|InStudio.Data\\InStudio.Data.csproj|solutionrelative:instudio.data\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C6523-A654-41CC-A9A7-20FF95E5E3BD}|InStudio.Data\\InStudio.Data.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio.data\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B67C6523-A654-41CC-A9A7-20FF95E5E3BD}|InStudio.Data\\InStudio.Data.csproj|solutionrelative:instudio.data\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C6523-A654-41CC-A9A7-20FF95E5E3BD}|InStudio.Data\\InStudio.Data.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio.data\\data\\generatemodels.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B67C6523-A654-41CC-A9A7-20FF95E5E3BD}|InStudio.Data\\InStudio.Data.csproj|solutionrelative:instudio.data\\data\\generatemodels.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C6523-A654-41CC-A9A7-20FF95E5E3BD}|InStudio.Data\\InStudio.Data.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio.data\\configurations\\usersubscriptiontypeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B67C6523-A654-41CC-A9A7-20FF95E5E3BD}|InStudio.Data\\InStudio.Data.csproj|solutionrelative:instudio.data\\configurations\\usersubscriptiontypeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{158D7C58-A08D-49E5-AD5E-87075738D3E8}|InStudio.Common\\InStudio.Common.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio.common\\predicatebuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{158D7C58-A08D-49E5-AD5E-87075738D3E8}|InStudio.Common\\InStudio.Common.csproj|solutionrelative:instudio.common\\predicatebuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA2AC12A-C464-4649-A62F-1AEDED9A9F35}|Solution Items{FA2AC12A-C464-4649-A62F-1AEDED9A9F35}|C:\\Users\\User\\Desktop\\Project\\InStudio\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{FA2AC12A-C464-4649-A62F-1AEDED9A9F35}|Solution Items{FA2AC12A-C464-4649-A62F-1AEDED9A9F35}|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540F4406-A940-4EF0-AD47-980ED7894A29}|InStudio\\InStudio.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio\\controllers\\usersubscriptiontypecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540F4406-A940-4EF0-AD47-980ED7894A29}|InStudio\\InStudio.csproj|solutionrelative:instudio\\controllers\\usersubscriptiontypecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{540F4406-A940-4EF0-AD47-980ED7894A29}|InStudio\\InStudio.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio\\controllers\\designcategorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,16 +91,8 @@
       "RelativeMoniker": "D:0:0:{C8E74E0B-364C-476D-A1D9-03C43BB06F6B}|InStudio.Services\\InStudio.Services.csproj|solutionrelative:instudio.services\\repositories\\interfaces\\iusersubscriptiontyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B67C6523-A654-41CC-A9A7-20FF95E5E3BD}|InStudio.Data\\InStudio.Data.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio.data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B67C6523-A654-41CC-A9A7-20FF95E5E3BD}|InStudio.Data\\InStudio.Data.csproj|solutionrelative:instudio.data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B67C6523-A654-41CC-A9A7-20FF95E5E3BD}|InStudio.Data\\InStudio.Data.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio.data\\migrations\\20240930161639_identitycreate.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B67C6523-A654-41CC-A9A7-20FF95E5E3BD}|InStudio.Data\\InStudio.Data.csproj|solutionrelative:instudio.data\\migrations\\20240930161639_identitycreate.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B67C6523-A654-41CC-A9A7-20FF95E5E3BD}|InStudio.Data\\InStudio.Data.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio.data\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B67C6523-A654-41CC-A9A7-20FF95E5E3BD}|InStudio.Data\\InStudio.Data.csproj|solutionrelative:instudio.data\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,7 +102,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,46 +110,163 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserSubscriptionTypeFilterDto.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Services\\Dtos\\UserSubscriptionType\\UserSubscriptionTypeFilterDto.cs",
-              "RelativeDocumentMoniker": "InStudio.Services\\Dtos\\UserSubscriptionType\\UserSubscriptionTypeFilterDto.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Services\\Dtos\\UserSubscriptionType\\UserSubscriptionTypeFilterDto.cs",
-              "RelativeToolTip": "InStudio.Services\\Dtos\\UserSubscriptionType\\UserSubscriptionTypeFilterDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAdAAAA",
+              "DocumentIndex": 0,
+              "Title": "20241003183206_Add_Project.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Data\\Migrations\\20241003183206_Add_Project.cs",
+              "RelativeDocumentMoniker": "InStudio.Data\\Migrations\\20241003183206_Add_Project.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Data\\Migrations\\20241003183206_Add_Project.cs",
+              "RelativeToolTip": "InStudio.Data\\Migrations\\20241003183206_Add_Project.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T16:07:19.253Z",
+              "WhenOpened": "2024-10-03T18:32:06.642Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "Project.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Data\\Models\\Project.cs",
+              "RelativeDocumentMoniker": "InStudio.Data\\Models\\Project.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Data\\Models\\Project.cs",
+              "RelativeToolTip": "InStudio.Data\\Models\\Project.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAmwBoAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T18:29:22.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DesignCategoryConfig.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Data\\Configurations\\DesignCategoryConfig.cs",
+              "RelativeDocumentMoniker": "InStudio.Data\\Configurations\\DesignCategoryConfig.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Data\\Configurations\\DesignCategoryConfig.cs",
+              "RelativeToolTip": "InStudio.Data\\Configurations\\DesignCategoryConfig.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T18:21:14.739Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Data\\Models\\User.cs",
+              "RelativeDocumentMoniker": "InStudio.Data\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Data\\Models\\User.cs",
+              "RelativeToolTip": "InStudio.Data\\Models\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T11:52:36.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IdentityConfig.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Data\\Configurations\\IdentityConfig.cs",
+              "RelativeDocumentMoniker": "InStudio.Data\\Configurations\\IdentityConfig.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Data\\Configurations\\IdentityConfig.cs",
+              "RelativeToolTip": "InStudio.Data\\Configurations\\IdentityConfig.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T16:23:04.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "InStudio.Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "InStudio.Data\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABoAAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T11:55:01.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ApplicationDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "InStudio.Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeToolTip": "InStudio.Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T18:16:11.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GenerateModels.txt",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Data\\Data\\GenerateModels.txt",
+              "RelativeDocumentMoniker": "InStudio.Data\\Data\\GenerateModels.txt",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Data\\Data\\GenerateModels.txt",
+              "RelativeToolTip": "InStudio.Data\\Data\\GenerateModels.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAACxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-10-03T18:15:00.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserSubscriptionTypeConfig.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Data\\Configurations\\UserSubscriptionTypeConfig.cs",
+              "RelativeDocumentMoniker": "InStudio.Data\\Configurations\\UserSubscriptionTypeConfig.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Data\\Configurations\\UserSubscriptionTypeConfig.cs",
+              "RelativeToolTip": "InStudio.Data\\Configurations\\UserSubscriptionTypeConfig.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T16:23:06.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PredicateBuilder.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Common\\PredicateBuilder.cs",
+              "RelativeDocumentMoniker": "InStudio.Common\\PredicateBuilder.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Common\\PredicateBuilder.cs",
+              "RelativeToolTip": "InStudio.Common\\PredicateBuilder.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T16:18:28.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AQIAAIkBAAAAAAAAAAAkwLkBAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-10-03T16:17:19.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "UserSubscriptionTypeController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio\\Controllers\\UserSubscriptionTypeController.cs",
               "RelativeDocumentMoniker": "InStudio\\Controllers\\UserSubscriptionTypeController.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio\\Controllers\\UserSubscriptionTypeController.cs",
               "RelativeToolTip": "InStudio\\Controllers\\UserSubscriptionTypeController.cs",
-              "ViewState": "AQIAAD8AAAAAAAAAAAAjwF8AAABbAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-03T12:08:08.448Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DesignCategoryController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio\\Controllers\\DesignCategoryController.cs",
-              "RelativeDocumentMoniker": "InStudio\\Controllers\\DesignCategoryController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio\\Controllers\\DesignCategoryController.cs",
-              "RelativeToolTip": "InStudio\\Controllers\\DesignCategoryController.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAAgwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T15:46:49.296Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 13,
               "Title": "DesignCategoryRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Services\\Repositories\\DesignCategoryRepository.cs",
               "RelativeDocumentMoniker": "InStudio.Services\\Repositories\\DesignCategoryRepository.cs",
@@ -130,7 +279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 14,
               "Title": "CreateDesignCategoryDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Services\\Dtos\\DesignCategory\\CreateDesignCategoryDto.cs",
               "RelativeDocumentMoniker": "InStudio.Services\\Dtos\\DesignCategory\\CreateDesignCategoryDto.cs",
@@ -143,7 +292,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
+              "Title": "DesignCategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio\\Controllers\\DesignCategoryController.cs",
+              "RelativeDocumentMoniker": "InStudio\\Controllers\\DesignCategoryController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio\\Controllers\\DesignCategoryController.cs",
+              "RelativeToolTip": "InStudio\\Controllers\\DesignCategoryController.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T15:46:49.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "GenericRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Services\\Repositories\\GenericRepository.cs",
               "RelativeDocumentMoniker": "InStudio.Services\\Repositories\\GenericRepository.cs",
@@ -156,7 +318,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 15,
               "Title": "UpdateDesignCategoryDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Services\\Dtos\\DesignCategory\\UpdateDesignCategoryDto.cs",
               "RelativeDocumentMoniker": "InStudio.Services\\Dtos\\DesignCategory\\UpdateDesignCategoryDto.cs",
@@ -169,7 +331,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 16,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio\\Program.cs",
               "RelativeDocumentMoniker": "InStudio\\Program.cs",
@@ -182,7 +344,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 18,
               "Title": "IGenericRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Services\\Repositories\\Interfaces\\IGenericRepository.cs",
               "RelativeDocumentMoniker": "InStudio.Services\\Repositories\\Interfaces\\IGenericRepository.cs",
@@ -195,7 +357,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 21,
               "Title": "IUserSubscriptionTypeRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Services\\Repositories\\Interfaces\\IUserSubscriptionTypeRepository.cs",
               "RelativeDocumentMoniker": "InStudio.Services\\Repositories\\Interfaces\\IUserSubscriptionTypeRepository.cs",
@@ -208,7 +370,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 19,
               "Title": "IDesignCategoryRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Services\\Repositories\\Interfaces\\IDesignCategoryRepository.cs",
               "RelativeDocumentMoniker": "InStudio.Services\\Repositories\\Interfaces\\IDesignCategoryRepository.cs",
@@ -221,7 +383,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 20,
               "Title": "UserSubscriptionTypeRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Services\\Repositories\\UserSubscriptionTypeRepository.cs",
               "RelativeDocumentMoniker": "InStudio.Services\\Repositories\\UserSubscriptionTypeRepository.cs",
@@ -234,20 +396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "InStudio.Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "InStudio.Data\\ApplicationDbContext.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAqwBsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T11:55:01.408Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 22,
               "Title": "20240930161639_IdentityCreate.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Data\\Migrations\\20240930161639_IdentityCreate.Designer.cs",
               "RelativeDocumentMoniker": "InStudio.Data\\Migrations\\20240930161639_IdentityCreate.Designer.cs",
@@ -256,19 +405,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-03T11:54:14.183Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Data\\Models\\User.cs",
-              "RelativeDocumentMoniker": "InStudio.Data\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Data\\Models\\User.cs",
-              "RelativeToolTip": "InStudio.Data\\Models\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T11:52:36.015Z",
               "EditorCaption": ""
             }
           ]

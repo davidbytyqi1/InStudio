@@ -17,6 +17,8 @@ namespace InStudio.Data.Configurations
 
             entity.ToTable("DesignCategory");
 
+            entity.HasIndex(e => e.ParentId, "IX_DesignCategory_ParentId");
+
             entity.Property(e => e.CreatedDate).HasColumnType("datetime");
             entity.Property(e => e.Description).HasMaxLength(500);
             entity.Property(e => e.Title).HasMaxLength(250);
