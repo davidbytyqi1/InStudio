@@ -11,6 +11,7 @@ namespace InStudio.Services.Dtos.UserSubscriptionType
         public string? Title { get; init; }
         public decimal? MinPrice { get; init; }
         public decimal? MaxPrice { get; init; }
+        public decimal? Price { get; init; }
         public int? ApplicationNumber { get; init; }
         public bool? HasDashboardBenefits { get; init; }
         public bool? HasProfileListBenefits { get; init; }

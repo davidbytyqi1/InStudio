@@ -100,7 +100,7 @@ namespace InStudio.Services.Services
             await _userSubscriptionTypeRepository.SaveChangesAsync();
         }
 
-        public async Task<PagedReadOnlyCollection<UserSubscriptionTypeDto>> GetSubscriptionTypeListAsync(
+        public async Task<PagedReadOnlyCollection<FilterUserSubscriptionTypeDto>> GetSubscriptionTypeListAsync(
             FilterUserSubscriptionTypeDto filterDto,
             PageableParams pagingParams,
             SortParameter sortParameters)
@@ -116,7 +116,7 @@ namespace InStudio.Services.Services
 
             var filter = CreateFilter(filterDto);
 
-            return await _userSubscriptionTypeRepository.GetPagedWithFilterAndProjectToAsync<UserSubscriptionTypeDto>(
+            return await _userSubscriptionTypeRepository.GetPagedWithFilterAndProjectToAsync<FilterUserSubscriptionTypeDto>(
                 filter,
                 pagingParams,
                 sortParameters);

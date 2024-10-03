@@ -18,7 +18,7 @@ namespace InStudio.Services.Services.Interfaces
 
         Task DeleteSubscriptionTypeAsync(int subscriptionTypeId);
 
-        Task<PagedReadOnlyCollection<UserSubscriptionTypeDto>> GetSubscriptionTypeListAsync(
+        Task<PagedReadOnlyCollection<FilterUserSubscriptionTypeDto>> GetSubscriptionTypeListAsync(
             FilterUserSubscriptionTypeDto filterDto, PageableParams pagingParams, SortParameter sortParameters);
     }
 }

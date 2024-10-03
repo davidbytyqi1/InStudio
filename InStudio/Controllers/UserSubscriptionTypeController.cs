@@ -1,5 +1,9 @@
-﻿using InStudio.Services.Dtos.UserSubscriptionType;
+﻿using InStudio.Attributes;
+using InStudio.Extensions;
+using InStudio.Filters;
+using InStudio.Services.Dtos.UserSubscriptionType;
 using InStudio.Services.Services.Interfaces;
+using Mapster;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -13,17 +17,18 @@ namespace InStudio.Controllers
     public class UserSubscriptionTypeController : ControllerBase
     {
         private readonly IUserSubscriptionTypeService _userSubscriptionTypeService;
-
-        public UserSubscriptionTypeController(IUserSubscriptionTypeService userSubscriptionTypeService)
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        public UserSubscriptionTypeController(IUserSubscriptionTypeService userSubscriptionTypeService, IHttpContextAccessor httpContextAccessor)
         {
             _userSubscriptionTypeService = userSubscriptionTypeService;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         [HttpGet]
         [AllowAnonymous]
-        public async Task<ActionResult<IEnumerable<UserSubscriptionTypeDto>>> GetAllSubscriptionTypes([FromQuery] FilterUserSubscriptionTypeDto filterDto)
+        public async Task<ActionResult<IEnumerable<UserSubscriptionTypeDto>>> GetAllSubscriptionTypes()
         {
-            var subscriptionTypes = await _userSubscriptionTypeService.GetSubscriptionTypeListAsync(filterDto, null, null);
+            var subscriptionTypes = await _userSubscriptionTypeService.GetAllSubscriptionTypesAsync();
             return Ok(subscriptionTypes);
         }
 
@@ -75,6 +80,20 @@ namespace InStudio.Controllers
 
             await _userSubscriptionTypeService.DeleteSubscriptionTypeAsync(id);
             return NoContent();
+        }
+
+
+        [HttpGet("FilterSubscriptionTypes")]
+        [PageableAndSortable]
+        [AllowAnonymous]
+        public async Task<IActionResult> GetSubscriptionTypes([FromQuery] SearchUserSubscriptionTypeRequest model)
+        {
+            var subscriptions = await _userSubscriptionTypeService.GetSubscriptionTypeListAsync(
+                model.Adapt<FilterUserSubscriptionTypeDto>(),
+                _httpContextAccessor.GetPageableParams(),
+                _httpContextAccessor.GetSortParams<FilterUserSubscriptionTypeDto>());
+
+            return subscriptions.TotalCount > 0 ? new OkObjectResult(subscriptions) : new NoContentResult();
         }
     }
 }
