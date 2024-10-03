@@ -293,9 +293,6 @@ C:\Users\User\Desktop\Project\InStudio\InStudio\bin\Debug\net8.0\Mapster.Core.dl
 C:\Users\User\Desktop\Project\InStudio\InStudio\bin\Debug\net8.0\InStudio.Services.dll
 C:\Users\User\Desktop\Project\InStudio\InStudio\bin\Debug\net8.0\InStudio.Services.pdb
 C:\Users\User\Desktop\Project\InStudio\InStudio\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\Users\User\Desktop\Project\InStudio\InStudio\bin\Debug\net8.0\InStudio.Common.deps.json
-C:\Users\User\Desktop\Project\InStudio\InStudio\bin\Debug\net8.0\InStudio.Common.runtimeconfig.json
-C:\Users\User\Desktop\Project\InStudio\InStudio\bin\Debug\net8.0\InStudio.Common.exe
 C:\Users\User\Desktop\Project\InStudio\InStudio\bin\Debug\net8.0\System.Linq.Dynamic.Core.dll
 C:\Users\User\Desktop\Project\InStudio\InStudio\bin\Debug\net8.0\InStudio.Common.dll
 C:\Users\User\Desktop\Project\InStudio\InStudio\bin\Debug\net8.0\InStudio.Common.pdb

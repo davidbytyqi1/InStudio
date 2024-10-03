@@ -1716,10 +1716,7 @@
         },
         "runtime": {
           "bin/placeholder/InStudio.Common.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "InStudio.Data/1.0.0": {
         "type": "project",

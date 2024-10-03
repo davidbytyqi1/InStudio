@@ -14,7 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InStudio.Services", "InStudio.Services\InStudio.Services.csproj", "{C8E74E0B-364C-476D-A1D9-03C43BB06F6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InStudio.Common", "InStudio.Common\InStudio.Common.csproj", "{9E78C936-E518-4BB9-A5E7-F4F3E6ED0B9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InStudio.Common", "InStudio.Common\InStudio.Common.csproj", "{158D7C58-A08D-49E5-AD5E-87075738D3E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,10 +34,10 @@ Global
 		{C8E74E0B-364C-476D-A1D9-03C43BB06F6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8E74E0B-364C-476D-A1D9-03C43BB06F6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8E74E0B-364C-476D-A1D9-03C43BB06F6B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9E78C936-E518-4BB9-A5E7-F4F3E6ED0B9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9E78C936-E518-4BB9-A5E7-F4F3E6ED0B9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9E78C936-E518-4BB9-A5E7-F4F3E6ED0B9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9E78C936-E518-4BB9-A5E7-F4F3E6ED0B9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{158D7C58-A08D-49E5-AD5E-87075738D3E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{158D7C58-A08D-49E5-AD5E-87075738D3E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{158D7C58-A08D-49E5-AD5E-87075738D3E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{158D7C58-A08D-49E5-AD5E-87075738D3E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
