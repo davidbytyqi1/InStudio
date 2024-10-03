@@ -6,15 +6,11 @@ using System.Threading.Tasks;
 
 namespace InStudio.Services.Dtos.DesignCategory
 {
-    public sealed record DesignCategoryDto
+    public sealed record UpdateDesignCategoryDto
     {
         public int Id { get; init; }
-        public string Title { get; init; }
+        public required string Title { get; init; }
         public string? Description { get; init; }
         public int? ParentId { get; init; }
-        public Guid CreatedBy { get; init; }
-        public DateTime CreatedDate { get; init; }
-        public Guid? UpdatedBy { get; init; }
-        public DateTime? UpdatedDate { get; init; }
     }
 }

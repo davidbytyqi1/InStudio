@@ -9,10 +9,11 @@ namespace InStudio.Services.Services.Interfaces
 {
     public interface IDesignCategoryService
     {
-            Task<DesignCategoryDto> CreateCategoryAsync(DesignCategoryDto dto);
-            Task<IEnumerable<DesignCategoryDto>> GetAllCategoriesAsync();
-            Task<DesignCategoryDto> GetCategoryByIdAsync(int categoryId);
-            Task UpdateCategoryAsync(DesignCategoryDto dto);
-            Task DeleteCategoryAsync(int categoryId);
+        Task<DesignCategoryDto> CreateCategoryAsync(CreateDesignCategoryDto dto);
+        Task<IEnumerable<DesignCategoryDto>> GetAllCategoriesAsync();
+        Task<DesignCategoryDto> GetCategoryByIdAsync(int categoryId);
+        Task UpdateCategoryAsync(UpdateDesignCategoryDto dto);
+        Task DeleteCategoryAsync(int categoryId);
     }
 }
+

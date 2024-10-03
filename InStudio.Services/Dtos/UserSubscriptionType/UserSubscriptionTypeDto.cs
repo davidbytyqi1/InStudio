@@ -8,12 +8,26 @@ namespace InStudio.Services.Dtos.UserSubscriptionType
 {
     public sealed record UserSubscriptionTypeDto
     {
-        public int Id { get; init; }
-        public required string Title { get; init; }
-        public decimal? Price { get; init; }
-        public string? Description { get; init; }
-        public int? ApplicationNumber { get; init; }
-        public bool? HasDashboardBenefits { get; init; }
-        public bool? HasProfileListBenefits { get; init; }
+        public int Id { get; set; }
+
+        public string Title { get; set; } = null!;
+
+        public decimal? Price { get; set; }
+
+        public string? Description { get; set; }
+
+        public int? ApplicationNumber { get; set; }
+
+        public bool? HasDashboardBenefits { get; set; }
+
+        public bool? HasProfileListBenefits { get; set; }
+
+        public Guid CreatedBy { get; set; }
+
+        public DateTime CreatedDate { get; set; }
+
+        public Guid? UpdatedBy { get; set; }
+
+        public DateTime? UpdatedDate { get; set; }
     }
 }

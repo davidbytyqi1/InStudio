@@ -43,7 +43,7 @@ namespace InStudio.Services.Services
             return identityUser != null ? Guid.Parse(identityUser.Id) : throw new UnauthorizedAccessException("User is not logged in.");
         }
 
-        public async Task<UserSubscriptionTypeDto> CreateSubscriptionTypeAsync(UserSubscriptionTypeDto dto)
+        public async Task<UserSubscriptionTypeDto> CreateSubscriptionTypeAsync(CreateUserSubscriptionTypeDto dto)
         {
             var subscriptionTypeEntity = dto.Adapt<UserSubscriptionType>();
             subscriptionTypeEntity.CreatedBy = await GetCurrentUserIdAsync();
@@ -72,7 +72,7 @@ namespace InStudio.Services.Services
             return subscriptionType.Adapt<UserSubscriptionTypeDto>();
         }
 
-        public async Task UpdateSubscriptionTypeAsync(UserSubscriptionTypeDto dto)
+        public async Task UpdateSubscriptionTypeAsync(UpdateUserSubscriptionTypeDto dto)
         {
             var existingSubscriptionType = await _userSubscriptionTypeRepository.FindAsync(c => c.Id == dto.Id);
             if (existingSubscriptionType == null)
@@ -101,12 +101,12 @@ namespace InStudio.Services.Services
         }
 
         public async Task<PagedReadOnlyCollection<UserSubscriptionTypeDto>> GetSubscriptionTypeListAsync(
-            UserSubscriptionTypeDto searchUserSubscriptionTypeDto,
+            FilterUserSubscriptionTypeDto filterDto,
             PageableParams pagingParams,
             SortParameter sortParameters)
         {
-            if (searchUserSubscriptionTypeDto == null)
-                throw new ArgumentNullException(nameof(searchUserSubscriptionTypeDto));
+            if (filterDto == null)
+                throw new ArgumentNullException(nameof(filterDto));
 
             if (pagingParams == null)
                 throw new ArgumentNullException(nameof(pagingParams));
@@ -114,7 +114,7 @@ namespace InStudio.Services.Services
             if (sortParameters == null)
                 throw new ArgumentNullException(nameof(sortParameters));
 
-            var filter = CreateFilter(searchUserSubscriptionTypeDto);
+            var filter = CreateFilter(filterDto);
 
             return await _userSubscriptionTypeRepository.GetPagedWithFilterAndProjectToAsync<UserSubscriptionTypeDto>(
                 filter,
@@ -122,12 +122,13 @@ namespace InStudio.Services.Services
                 sortParameters);
         }
 
-        private Expression<Func<UserSubscriptionType, bool>> CreateFilter(UserSubscriptionTypeDto searchDto)
+        private Expression<Func<UserSubscriptionType, bool>> CreateFilter(FilterUserSubscriptionTypeDto filterDto)
         {
             return x =>
-                (string.IsNullOrEmpty(searchDto.Title) || x.Title.Contains(searchDto.Title)) &&
-                (!searchDto.Price.HasValue || x.Price == searchDto.Price) &&
-                (!searchDto.HasDashboardBenefits.HasValue || x.HasDashboardBenefits == searchDto.HasDashboardBenefits);
+                (string.IsNullOrEmpty(filterDto.Title) || x.Title.Contains(filterDto.Title)) &&
+                (!filterDto.MinPrice.HasValue || x.Price >= filterDto.MinPrice) &&
+                (!filterDto.MaxPrice.HasValue || x.Price <= filterDto.MaxPrice) &&
+                (!filterDto.HasDashboardBenefits.HasValue || x.HasDashboardBenefits == filterDto.HasDashboardBenefits);
         }
     }
 }

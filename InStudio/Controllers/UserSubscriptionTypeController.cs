@@ -21,9 +21,9 @@ namespace InStudio.Controllers
 
         [HttpGet]
         [AllowAnonymous]
-        public async Task<ActionResult<IEnumerable<UserSubscriptionTypeDto>>> GetAllSubscriptionTypes()
+        public async Task<ActionResult<IEnumerable<UserSubscriptionTypeDto>>> GetAllSubscriptionTypes([FromQuery] FilterUserSubscriptionTypeDto filterDto)
         {
-            var subscriptionTypes = await _userSubscriptionTypeService.GetAllSubscriptionTypesAsync();
+            var subscriptionTypes = await _userSubscriptionTypeService.GetSubscriptionTypeListAsync(filterDto, null, null);
             return Ok(subscriptionTypes);
         }
 
@@ -41,7 +41,7 @@ namespace InStudio.Controllers
         [HttpPost]
         [Authorize(Roles = "Admin")]
         [IgnoreAntiforgeryToken]
-        public async Task<ActionResult<UserSubscriptionTypeDto>> CreateSubscriptionType([FromBody] UserSubscriptionTypeDto subscriptionTypeDto)
+        public async Task<ActionResult<UserSubscriptionTypeDto>> CreateSubscriptionType([FromBody] CreateUserSubscriptionTypeDto subscriptionTypeDto)
         {
             if (subscriptionTypeDto == null)
                 return BadRequest("Invalid subscription type data.");
@@ -52,7 +52,7 @@ namespace InStudio.Controllers
 
         [HttpPut("{id}")]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> UpdateSubscriptionType(int id, [FromBody] UserSubscriptionTypeDto subscriptionTypeDto)
+        public async Task<IActionResult> UpdateSubscriptionType(int id, [FromBody] UpdateUserSubscriptionTypeDto subscriptionTypeDto)
         {
             if (id != subscriptionTypeDto.Id)
                 return BadRequest("Subscription Type ID mismatch.");

@@ -50,7 +50,7 @@ namespace InStudio.Controllers
         [HttpPost]
         [Authorize(Roles = "Admin")]
         [IgnoreAntiforgeryToken]
-        public async Task<ActionResult<DesignCategoryDto>> CreateCategory([FromBody] DesignCategoryDto categoryDto)
+        public async Task<ActionResult<DesignCategoryDto>> CreateCategory([FromBody] CreateDesignCategoryDto categoryDto)
         {
             if (categoryDto == null)
                 return BadRequest("Invalid category data.");
@@ -61,7 +61,7 @@ namespace InStudio.Controllers
 
         [HttpPut("{id}")]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> UpdateCategory(int id, [FromBody] DesignCategoryDto categoryDto)
+        public async Task<IActionResult> UpdateCategory(int id, [FromBody] UpdateDesignCategoryDto categoryDto)
         {
             if (id != categoryDto.Id)
                 return BadRequest("Category ID mismatch.");

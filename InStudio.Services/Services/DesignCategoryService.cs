@@ -37,7 +37,7 @@ namespace InStudio.Services.Services
             return identityUser != null ? Guid.Parse(identityUser.Id) : throw new UnauthorizedAccessException("User is not logged in.");
         }
 
-        public async Task<DesignCategoryDto> CreateCategoryAsync(DesignCategoryDto dto)
+        public async Task<DesignCategoryDto> CreateCategoryAsync(CreateDesignCategoryDto dto)
         {
             var categoryEntity = dto.Adapt<DesignCategory>();
             categoryEntity.CreatedBy = await GetCurrentUserIdAsync();
@@ -66,7 +66,7 @@ namespace InStudio.Services.Services
             return category.Adapt<DesignCategoryDto>();
         }
 
-        public async Task UpdateCategoryAsync(DesignCategoryDto dto)
+        public async Task UpdateCategoryAsync(UpdateDesignCategoryDto dto)
         {
             var existingCategory = await _designCategoryRepository.FindAsync(c => c.Id == dto.Id);
             if (existingCategory == null)
