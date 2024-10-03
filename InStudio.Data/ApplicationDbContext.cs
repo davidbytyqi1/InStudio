@@ -15,6 +15,7 @@ namespace InStudio.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
         public virtual DbSet<DesignCategory> DesignCategory { get; set; } = null!;
+        public virtual DbSet<UserSubscriptionType> UserSubscriptionType { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
