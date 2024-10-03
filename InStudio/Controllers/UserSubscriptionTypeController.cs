@@ -93,7 +93,7 @@ namespace InStudio.Controllers
                 _httpContextAccessor.GetPageableParams(),
                 _httpContextAccessor.GetSortParams<SearchUserSubscriptionTypeResponse>());
 
-            return subscriptions.TotalCount > 0 ? new OkObjectResult(subscriptions.Adapt<IList<SearchUserSubscriptionTypeResponse>>()) : new NoContentResult();
+            return subscriptions.TotalCount > 0 ? new OkObjectResult(new { Data = subscriptions.Adapt<IList<SearchUserSubscriptionTypeResponse>>(), Count = subscriptions.TotalCount }) : new NoContentResult();
         }
     }
 }

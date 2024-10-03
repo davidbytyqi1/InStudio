@@ -113,13 +113,26 @@ namespace InStudio.Services.Services
                 sortParameters);
         }
 
-        private Expression<Func<UserSubscriptionType, bool>> CreateFilter(UserSubscriptionTypeFilterDto filterDto)
+        private static Expression<Func<UserSubscriptionType, bool>> CreateFilter(UserSubscriptionTypeFilterDto filterDto)
         {
-            return x =>
-                (string.IsNullOrEmpty(filterDto.Title) || x.Title.Contains(filterDto.Title)) &&
-                (!filterDto.MinPrice.HasValue || x.Price >= filterDto.MinPrice) &&
-                (!filterDto.MaxPrice.HasValue || x.Price <= filterDto.MaxPrice) &&
-                (!filterDto.HasDashboardBenefits.HasValue || x.HasDashboardBenefits == filterDto.HasDashboardBenefits);
+            var predicate = PredicateBuilder.True<UserSubscriptionType>();
+
+            if (!string.IsNullOrEmpty(filterDto.Title))
+            {
+                predicate = predicate.And(x => x.Title.Contains(filterDto.Title));
+            }
+
+            if (filterDto.MinPrice.HasValue)
+            {
+                predicate = predicate.And(x => x.Price >= filterDto.MinPrice);
+            }
+
+            if (filterDto.MaxPrice.HasValue)
+            {
+                predicate = predicate.And(x => x.Price <= filterDto.MaxPrice);
+            }
+
+            return predicate;
         }
     }
 }
