@@ -83,7 +83,7 @@ namespace InStudio.Controllers
         }
 
 
-        [HttpGet("FilterSubscriptionTypes")]
+        [HttpGet("Filter")]
         [PageableAndSortable]
         [AllowAnonymous]
         public async Task<IActionResult> GetSubscriptionTypes([FromQuery] SearchUserSubscriptionTypeRequest model)
@@ -93,7 +93,7 @@ namespace InStudio.Controllers
                 _httpContextAccessor.GetPageableParams(),
                 _httpContextAccessor.GetSortParams<SearchUserSubscriptionTypeResponse>());
 
-            return subscriptions.TotalCount > 0 ? new OkObjectResult(subscriptions.Adapt<SearchUserSubscriptionTypeResponse>()) : new NoContentResult();
+            return subscriptions.TotalCount > 0 ? new OkObjectResult(subscriptions.Adapt<IList<SearchUserSubscriptionTypeResponse>>()) : new NoContentResult();
         }
     }
 }

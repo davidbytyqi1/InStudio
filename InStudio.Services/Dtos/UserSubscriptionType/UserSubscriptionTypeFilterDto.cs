@@ -8,6 +8,7 @@ namespace InStudio.Services.Dtos.UserSubscriptionType
 {
     public sealed record UserSubscriptionTypeFilterDto
     {
+        public string? Id { get; init; }
         public string? Title { get; init; }
         public decimal? MinPrice { get; init; }
         public decimal? MaxPrice { get; init; }
