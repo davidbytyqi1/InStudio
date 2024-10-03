@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vBmoQ3UYOJ+t8V+vHfTBt9+qGQMq1+1d068cVLhc3+wDZlY2N0b0S4TvQqM6DYPLqEF4gkGAAOf4cQZkJUjVng==",
+  "dgSpecHash": "rrpic9mUD+OjcPyf+NB/dKyS5bBxn7bW3zz6O/a1lPjApLRuLbCBfTe4oGoQ0iTsXsvhrFXVO7o3XVPbaf8nIw==",
   "success": true,
   "projectFilePath": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio\\InStudio.csproj",
   "expectedPackageFiles": [
@@ -75,6 +75,7 @@
     "C:\\Users\\User\\.nuget\\packages\\system.identitymodel.tokens.jwt\\7.1.2\\system.identitymodel.tokens.jwt.7.1.2.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.io.filesystem.accesscontrol\\5.0.0\\system.io.filesystem.accesscontrol.5.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.io.pipelines\\6.0.3\\system.io.pipelines.6.0.3.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.linq.dynamic.core\\1.4.5\\system.linq.dynamic.core.1.4.5.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",

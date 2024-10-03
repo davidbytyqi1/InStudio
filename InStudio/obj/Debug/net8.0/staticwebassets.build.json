@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "yAe6pY3D6IFnTeWgFoJqZSYVoouGjD48G8Nc/KoiV6g=",
+  "Hash": "tt2NGN/AHbavC6mcvA/T1c2yQLHw7BSABYCiV3ouoKE=",
   "Source": "InStudio",
   "BasePath": "_content/InStudio",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Common\\InStudio.Common.csproj",
+      "Version": 2,
+      "Source": "InStudio.Common",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
   "DiscoveryPatterns": [],
   "Assets": []
 }

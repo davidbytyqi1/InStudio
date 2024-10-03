@@ -1,4 +1,6 @@
-﻿using System.Linq.Expressions;
+﻿using InStudio.Common;
+using InStudio.Common.Types;
+using System.Linq.Expressions;
 
 namespace InStudio.Services.Repositories.Interfaces
 {
@@ -24,5 +26,8 @@ namespace InStudio.Services.Repositories.Interfaces
         Task<bool> AnyAsync(Expression<Func<T, bool>> criteria);
 
         Task<int> CountAsync(Expression<Func<T, bool>> predicate);
+
+        Task<PagedReadOnlyCollection<TResult>> GetPagedWithFilterAndProjectToAsync<TResult>(Expression<Func<T, bool>> criteria, PageableParams pagingParams, SortParameter sortParamters)
+            where TResult : class;
     }
 }

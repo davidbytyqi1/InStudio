@@ -9,6 +9,9 @@ using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using InStudio.Common.Types;
+using InStudio.Common;
+using System.Linq.Expressions;
 
 namespace InStudio.Services.Services
 {
@@ -95,6 +98,36 @@ namespace InStudio.Services.Services
 
             await _userSubscriptionTypeRepository.DeleteAsync(subscriptionType);
             await _userSubscriptionTypeRepository.SaveChangesAsync();
+        }
+
+        public async Task<PagedReadOnlyCollection<UserSubscriptionTypeDto>> GetSubscriptionTypeListAsync(
+            UserSubscriptionTypeDto searchUserSubscriptionTypeDto,
+            PageableParams pagingParams,
+            SortParameter sortParameters)
+        {
+            if (searchUserSubscriptionTypeDto == null)
+                throw new ArgumentNullException(nameof(searchUserSubscriptionTypeDto));
+
+            if (pagingParams == null)
+                throw new ArgumentNullException(nameof(pagingParams));
+
+            if (sortParameters == null)
+                throw new ArgumentNullException(nameof(sortParameters));
+
+            var filter = CreateFilter(searchUserSubscriptionTypeDto);
+
+            return await _userSubscriptionTypeRepository.GetPagedWithFilterAndProjectToAsync<UserSubscriptionTypeDto>(
+                filter,
+                pagingParams,
+                sortParameters);
+        }
+
+        private Expression<Func<UserSubscriptionType, bool>> CreateFilter(UserSubscriptionTypeDto searchDto)
+        {
+            return x =>
+                (string.IsNullOrEmpty(searchDto.Title) || x.Title.Contains(searchDto.Title)) &&
+                (!searchDto.Price.HasValue || x.Price == searchDto.Price) &&
+                (!searchDto.HasDashboardBenefits.HasValue || x.HasDashboardBenefits == searchDto.HasDashboardBenefits);
         }
     }
 }

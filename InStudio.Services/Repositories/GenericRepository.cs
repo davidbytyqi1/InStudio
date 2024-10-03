@@ -1,7 +1,11 @@
 ﻿using System.Linq.Expressions;
+using System.Linq.Dynamic.Core;
+using InStudio.Common.Types;
+using InStudio.Common;
 using InStudio.Data;
 using InStudio.Services.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Mapster;
 
 namespace InStudio.Services.Repositories
 {
@@ -68,6 +72,28 @@ namespace InStudio.Services.Repositories
         public async Task<int> CountAsync(Expression<Func<T, bool>> predicate)
         {
             return await _context.Set<T>().CountAsync(predicate);
+        }
+
+        public async Task<PagedReadOnlyCollection<TResult>> GetPagedWithFilterAndProjectToAsync<TResult>(Expression<Func<T, bool>> criteria, PageableParams pagingParams, SortParameter sortParamters)
+           where TResult : class
+        {
+            var query = _context.Set<T>().Where(criteria);
+
+            var totalCount = await query.LongCountAsync();
+            if (totalCount == 0)
+            {
+                return new PagedReadOnlyCollection<TResult>(new List<TResult>(), totalCount);
+            }
+
+            if (!string.IsNullOrEmpty(sortParamters.SortBy))
+            {
+                query = query.OrderBy($"{sortParamters.SortBy} {sortParamters.SortDirection}");
+            }
+
+            var pagedOrdered = query.Skip((pagingParams.Page - 1) * pagingParams.Size).Take(pagingParams.Size);
+            var list = await pagedOrdered.ProjectToType<TResult>().ToListAsync();
+
+            return new PagedReadOnlyCollection<TResult>(list, totalCount);
         }
     }
 }
