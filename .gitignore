@@ -453,3 +453,12 @@ obj/
 # Ignore cache files
 *.cache
 
+
+# Ignore build output folders
+bin/
+obj/
+
+# Ignore AssemblyInfo and other auto-generated files
+**/AssemblyInfo.*
+**/AssemblyInfoInputs.cache
+
