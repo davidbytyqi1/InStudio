@@ -1,0 +1,1 @@
+Scaffold-DbContext "Server=DESKTOP-V0ORPD9;Database=InStudioDb;User Id=sa;Password=P@ssw0rd;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Data

@@ -20,6 +20,8 @@ namespace InStudio.Data
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfiguration(new IdentityConfig());
+            modelBuilder.ApplyConfiguration(new DesignCategoryConfig());
+            modelBuilder.ApplyConfiguration(new UserSubscriptionTypeConfig());
         }
     }
 }

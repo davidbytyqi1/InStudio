@@ -76,6 +76,8 @@ builder.Services.AddAuthorization(options =>
 
 builder.Services.AddScoped<IDesignCategoryService, DesignCategoryService>();
 builder.Services.AddScoped<IDesignCategoryRepository, DesignCategoryRepository>();
+builder.Services.AddScoped<IUserSubscriptionTypeRepository, UserSubscriptionTypeRepository>();
+builder.Services.AddScoped<IUserSubscriptionTypeService, UserSubscriptionTypeService>();
 
 
 var app = builder.Build();
