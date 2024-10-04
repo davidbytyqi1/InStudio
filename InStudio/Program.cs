@@ -78,6 +78,8 @@ builder.Services.AddScoped<IDesignCategoryService, DesignCategoryService>();
 builder.Services.AddScoped<IDesignCategoryRepository, DesignCategoryRepository>();
 builder.Services.AddScoped<IUserSubscriptionTypeRepository, UserSubscriptionTypeRepository>();
 builder.Services.AddScoped<IUserSubscriptionTypeService, UserSubscriptionTypeService>();
+builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
+builder.Services.AddScoped<IProjectService, ProjectService>();
 
 
 var app = builder.Build();

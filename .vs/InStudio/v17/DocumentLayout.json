@@ -3,12 +3,72 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\Project\\InStudio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{540F4406-A940-4EF0-AD47-980ED7894A29}|InStudio\\InStudio.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio\\controllers\\usersubscriptiontypecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{540F4406-A940-4EF0-AD47-980ED7894A29}|InStudio\\InStudio.csproj|solutionrelative:instudio\\controllers\\usersubscriptiontypecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{540F4406-A940-4EF0-AD47-980ED7894A29}|InStudio\\InStudio.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540F4406-A940-4EF0-AD47-980ED7894A29}|InStudio\\InStudio.csproj|solutionrelative:instudio\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E74E0B-364C-476D-A1D9-03C43BB06F6B}|InStudio.Services\\InStudio.Services.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio.services\\dtos\\project\\projectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E74E0B-364C-476D-A1D9-03C43BB06F6B}|InStudio.Services\\InStudio.Services.csproj|solutionrelative:instudio.services\\dtos\\project\\projectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E74E0B-364C-476D-A1D9-03C43BB06F6B}|InStudio.Services\\InStudio.Services.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio.services\\dtos\\project\\createprojectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E74E0B-364C-476D-A1D9-03C43BB06F6B}|InStudio.Services\\InStudio.Services.csproj|solutionrelative:instudio.services\\dtos\\project\\createprojectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E74E0B-364C-476D-A1D9-03C43BB06F6B}|InStudio.Services\\InStudio.Services.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio.services\\services\\projectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E74E0B-364C-476D-A1D9-03C43BB06F6B}|InStudio.Services\\InStudio.Services.csproj|solutionrelative:instudio.services\\services\\projectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540F4406-A940-4EF0-AD47-980ED7894A29}|InStudio\\InStudio.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540F4406-A940-4EF0-AD47-980ED7894A29}|InStudio\\InStudio.csproj|solutionrelative:instudio\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{540F4406-A940-4EF0-AD47-980ED7894A29}|InStudio\\InStudio.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio\\controllers\\designcategorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{540F4406-A940-4EF0-AD47-980ED7894A29}|InStudio\\InStudio.csproj|solutionrelative:instudio\\controllers\\designcategorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540F4406-A940-4EF0-AD47-980ED7894A29}|InStudio\\InStudio.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio\\controllers\\usersubscriptiontypecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540F4406-A940-4EF0-AD47-980ED7894A29}|InStudio\\InStudio.csproj|solutionrelative:instudio\\controllers\\usersubscriptiontypecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E74E0B-364C-476D-A1D9-03C43BB06F6B}|InStudio.Services\\InStudio.Services.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio.services\\services\\interfaces\\iprojectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E74E0B-364C-476D-A1D9-03C43BB06F6B}|InStudio.Services\\InStudio.Services.csproj|solutionrelative:instudio.services\\services\\interfaces\\iprojectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E74E0B-364C-476D-A1D9-03C43BB06F6B}|InStudio.Services\\InStudio.Services.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio.services\\services\\designcategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E74E0B-364C-476D-A1D9-03C43BB06F6B}|InStudio.Services\\InStudio.Services.csproj|solutionrelative:instudio.services\\services\\designcategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E74E0B-364C-476D-A1D9-03C43BB06F6B}|InStudio.Services\\InStudio.Services.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio.services\\services\\interfaces\\idesigncategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E74E0B-364C-476D-A1D9-03C43BB06F6B}|InStudio.Services\\InStudio.Services.csproj|solutionrelative:instudio.services\\services\\interfaces\\idesigncategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E74E0B-364C-476D-A1D9-03C43BB06F6B}|InStudio.Services\\InStudio.Services.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio.services\\repositories\\projectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E74E0B-364C-476D-A1D9-03C43BB06F6B}|InStudio.Services\\InStudio.Services.csproj|solutionrelative:instudio.services\\repositories\\projectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E74E0B-364C-476D-A1D9-03C43BB06F6B}|InStudio.Services\\InStudio.Services.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio.services\\repositories\\interfaces\\idesigncategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E74E0B-364C-476D-A1D9-03C43BB06F6B}|InStudio.Services\\InStudio.Services.csproj|solutionrelative:instudio.services\\repositories\\interfaces\\idesigncategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E74E0B-364C-476D-A1D9-03C43BB06F6B}|InStudio.Services\\InStudio.Services.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio.services\\repositories\\interfaces\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E74E0B-364C-476D-A1D9-03C43BB06F6B}|InStudio.Services\\InStudio.Services.csproj|solutionrelative:instudio.services\\repositories\\interfaces\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E74E0B-364C-476D-A1D9-03C43BB06F6B}|InStudio.Services\\InStudio.Services.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio.services\\repositories\\designcategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E74E0B-364C-476D-A1D9-03C43BB06F6B}|InStudio.Services\\InStudio.Services.csproj|solutionrelative:instudio.services\\repositories\\designcategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C6523-A654-41CC-A9A7-20FF95E5E3BD}|InStudio.Data\\InStudio.Data.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio.data\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B67C6523-A654-41CC-A9A7-20FF95E5E3BD}|InStudio.Data\\InStudio.Data.csproj|solutionrelative:instudio.data\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B67C6523-A654-41CC-A9A7-20FF95E5E3BD}|InStudio.Data\\InStudio.Data.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio.data\\models\\designcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B67C6523-A654-41CC-A9A7-20FF95E5E3BD}|InStudio.Data\\InStudio.Data.csproj|solutionrelative:instudio.data\\models\\designcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E74E0B-364C-476D-A1D9-03C43BB06F6B}|InStudio.Services\\InStudio.Services.csproj|c:\\users\\user\\desktop\\project\\instudio\\instudio.services\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E74E0B-364C-476D-A1D9-03C43BB06F6B}|InStudio.Services\\InStudio.Services.csproj|solutionrelative:instudio.services\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,36 +78,231 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio\\Program.cs",
+              "RelativeDocumentMoniker": "InStudio\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio\\Program.cs",
+              "RelativeToolTip": "InStudio\\Program.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAAEkAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T10:38:38.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProjectDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Services\\Dtos\\Project\\ProjectDto.cs",
+              "RelativeDocumentMoniker": "InStudio.Services\\Dtos\\Project\\ProjectDto.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Services\\Dtos\\Project\\ProjectDto.cs",
+              "RelativeToolTip": "InStudio.Services\\Dtos\\Project\\ProjectDto.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABQAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T10:38:28.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CreateProjectDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Services\\Dtos\\Project\\CreateProjectDto.cs",
+              "RelativeDocumentMoniker": "InStudio.Services\\Dtos\\Project\\CreateProjectDto.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Services\\Dtos\\Project\\CreateProjectDto.cs",
+              "RelativeToolTip": "InStudio.Services\\Dtos\\Project\\CreateProjectDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T10:38:09.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProjectController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio\\Controllers\\ProjectController.cs",
+              "RelativeDocumentMoniker": "InStudio\\Controllers\\ProjectController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio\\Controllers\\ProjectController.cs",
+              "RelativeToolTip": "InStudio\\Controllers\\ProjectController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T10:36:52.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProjectService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Services\\Services\\ProjectService.cs",
+              "RelativeDocumentMoniker": "InStudio.Services\\Services\\ProjectService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Services\\Services\\ProjectService.cs",
+              "RelativeToolTip": "InStudio.Services\\Services\\ProjectService.cs",
+              "ViewState": "AQIAADUAAAAAAAAAAAApwEgAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T10:35:18.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IProjectService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Services\\Services\\Interfaces\\IProjectService.cs",
+              "RelativeDocumentMoniker": "InStudio.Services\\Services\\Interfaces\\IProjectService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Services\\Services\\Interfaces\\IProjectService.cs",
+              "RelativeToolTip": "InStudio.Services\\Services\\Interfaces\\IProjectService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T10:33:00.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DesignCategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Services\\Services\\DesignCategoryService.cs",
+              "RelativeDocumentMoniker": "InStudio.Services\\Services\\DesignCategoryService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Services\\Services\\DesignCategoryService.cs",
+              "RelativeToolTip": "InStudio.Services\\Services\\DesignCategoryService.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAswGAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T10:32:31.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "UserSubscriptionTypeController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio\\Controllers\\UserSubscriptionTypeController.cs",
               "RelativeDocumentMoniker": "InStudio\\Controllers\\UserSubscriptionTypeController.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio\\Controllers\\UserSubscriptionTypeController.cs",
               "RelativeToolTip": "InStudio\\Controllers\\UserSubscriptionTypeController.cs",
-              "ViewState": "AQIAAEcAAAAAAAAAAAAowF8AAAAsAAAA",
+              "ViewState": "AQIAADYAAAAAAAAAAAAkwEIAAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-03T18:45:45.007Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "DesignCategoryController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio\\Controllers\\DesignCategoryController.cs",
               "RelativeDocumentMoniker": "InStudio\\Controllers\\DesignCategoryController.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio\\Controllers\\DesignCategoryController.cs",
               "RelativeToolTip": "InStudio\\Controllers\\DesignCategoryController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAswFkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-03T18:45:44.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IDesignCategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Services\\Services\\Interfaces\\IDesignCategoryService.cs",
+              "RelativeDocumentMoniker": "InStudio.Services\\Services\\Interfaces\\IDesignCategoryService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Services\\Services\\Interfaces\\IDesignCategoryService.cs",
+              "RelativeToolTip": "InStudio.Services\\Services\\Interfaces\\IDesignCategoryService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T10:32:14.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProjectRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Services\\Repositories\\ProjectRepository.cs",
+              "RelativeDocumentMoniker": "InStudio.Services\\Repositories\\ProjectRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Services\\Repositories\\ProjectRepository.cs",
+              "RelativeToolTip": "InStudio.Services\\Repositories\\ProjectRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T10:30:55.016Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Services\\Repositories\\Interfaces\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "InStudio.Services\\Repositories\\Interfaces\\IGenericRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Services\\Repositories\\Interfaces\\IGenericRepository.cs",
+              "RelativeToolTip": "InStudio.Services\\Repositories\\Interfaces\\IGenericRepository.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAIAzwCIAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T10:18:19.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IDesignCategoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Services\\Repositories\\Interfaces\\IDesignCategoryRepository.cs",
+              "RelativeDocumentMoniker": "InStudio.Services\\Repositories\\Interfaces\\IDesignCategoryRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Services\\Repositories\\Interfaces\\IDesignCategoryRepository.cs",
+              "RelativeToolTip": "InStudio.Services\\Repositories\\Interfaces\\IDesignCategoryRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T10:28:42.564Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DesignCategoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Services\\Repositories\\DesignCategoryRepository.cs",
+              "RelativeDocumentMoniker": "InStudio.Services\\Repositories\\DesignCategoryRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Services\\Repositories\\DesignCategoryRepository.cs",
+              "RelativeToolTip": "InStudio.Services\\Repositories\\DesignCategoryRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T10:28:52.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Project.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Data\\Models\\Project.cs",
+              "RelativeDocumentMoniker": "InStudio.Data\\Models\\Project.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Data\\Models\\Project.cs",
+              "RelativeToolTip": "InStudio.Data\\Models\\Project.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T10:27:27.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DesignCategory.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Data\\Models\\DesignCategory.cs",
+              "RelativeDocumentMoniker": "InStudio.Data\\Models\\DesignCategory.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Data\\Models\\DesignCategory.cs",
+              "RelativeToolTip": "InStudio.Data\\Models\\DesignCategory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T10:27:23.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Services\\Repositories\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "InStudio.Services\\Repositories\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\InStudio\\InStudio.Services\\Repositories\\GenericRepository.cs",
+              "RelativeToolTip": "InStudio.Services\\Repositories\\GenericRepository.cs",
+              "ViewState": "AQIAAIcAAAAAAAAAAAAswKIAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T10:14:19.146Z",
               "EditorCaption": ""
             }
           ]

@@ -38,6 +38,21 @@ namespace InStudio.Services.Repositories
         {
             return await _context.Set<T>().ToListAsync();
         }
+        public T GetSingleByCriteria(Expression<Func<T, bool>> criteria, params string[] includes)
+        {
+            IQueryable<T> query = _context.Set<T>();
+
+            if (includes != null)
+            {
+                int count = includes.Length;
+                for (int index = 0; index < count; index++)
+                {
+                    query = query.Include(includes[index]);
+                }
+            }
+
+            return query.AsNoTracking().Where(criteria).FirstOrDefault();
+        }
 
         public async Task<IEnumerable<T>> FindAllAsync(Expression<Func<T, bool>> predicate)
         {
@@ -95,5 +110,70 @@ namespace InStudio.Services.Repositories
 
             return new PagedReadOnlyCollection<TResult>(list, totalCount);
         }
+
+        public async Task<PagedReadOnlyCollection<TResult>> GetPagedWithFilterAndProjectToAsync<TResult>(Expression<Func<T, bool>> criteria, PageableParams pagingParams, SortParameter sortParameters, params string[] includes) where TResult : class
+        {
+            IQueryable<T> query = _context.Set<T>();
+            if (includes != null)
+            {
+                foreach (var include in includes)
+                {
+                    query = query.Include(include);
+                }
+            }
+
+            query = query.Where(criteria);
+
+            var totalCount = await query.LongCountAsync();
+            if (totalCount == 0)
+            {
+                return new PagedReadOnlyCollection<TResult>(new List<TResult>(), totalCount);
+            }
+
+            if (!string.IsNullOrEmpty(sortParameters.SortBy))
+            {
+                query = query.OrderBy($"{sortParameters.SortBy} {sortParameters.SortDirection}");
+            }
+
+            var pagedOrdered = query.Skip((pagingParams.Page - 1) * pagingParams.Size).Take(pagingParams.Size);
+            var list = await pagedOrdered.ProjectToType<TResult>().ToListAsync();
+
+            return new PagedReadOnlyCollection<TResult>(list, totalCount);
+        }
+
+        public async Task<T> GetSingleByCriteriaAsync(Expression<Func<T, bool>> criteria, params string[] includes)
+        {
+            IQueryable<T> query = _context.Set<T>();
+
+            if (includes != null)
+            {
+                foreach (var include in includes)
+                {
+                    query = query.Include(include);
+                }
+            }
+
+            return await query.AsNoTracking()?.Where(criteria).FirstOrDefaultAsync();
+        }
+        public async Task<List<T>> ListByCriteriaAsync(Expression<Func<T, bool>> criteria, params string[] includes)
+        {
+            IQueryable<T> query = _context.Set<T>();
+
+            if (includes != null)
+            {
+                foreach (var include in includes)
+                {
+                    query = query.Include(include);
+                }
+            }
+
+            return await query.AsNoTracking().Where(criteria).ToListAsync();
+        }
+        public async Task<int> CountByCriteriaAsync(Expression<Func<T, bool>> criteria)
+        {
+            IQueryable<T> query = _context.Set<T>();
+            return await query.Where(criteria).CountAsync();
+        }
+
     }
 }

@@ -29,5 +29,13 @@ namespace InStudio.Services.Repositories.Interfaces
 
         Task<PagedReadOnlyCollection<TResult>> GetPagedWithFilterAndProjectToAsync<TResult>(Expression<Func<T, bool>> criteria, PageableParams pagingParams, SortParameter sortParamters)
             where TResult : class;
+
+        Task<PagedReadOnlyCollection<TResult>> GetPagedWithFilterAndProjectToAsync<TResult>(Expression<Func<T, bool>> criteria, PageableParams pagingParams, SortParameter sortParameters, params string[] includes) where TResult : class;
+
+        Task<T> GetSingleByCriteriaAsync(Expression<Func<T, bool>> criteria, params string[] includes);
+
+        Task<List<T>> ListByCriteriaAsync(Expression<Func<T, bool>> criteria, params string[] includes);
+
+        Task<int> CountByCriteriaAsync(Expression<Func<T, bool>> criteria);
     }
 }
