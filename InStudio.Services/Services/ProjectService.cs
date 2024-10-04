@@ -1,5 +1,9 @@
-﻿using InStudio.Data.Models;
+﻿using InStudio.Common.Types;
+using InStudio.Common;
+using InStudio.Data.Models;
 using InStudio.Services.Dtos.Project;
+using InStudio.Services.Dtos.UserSubscriptionType;
+using InStudio.Services.Repositories;
 using InStudio.Services.Repositories.Interfaces;
 using InStudio.Services.Services.Interfaces;
 using Mapster;
@@ -8,6 +12,7 @@ using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -96,5 +101,28 @@ namespace InStudio.Services.Services
 
             await _projectRepository.DeleteAsync(project);
         }
+
+        public async Task<PagedReadOnlyCollection<ProjectFilterDto>> GetProjectListAsync(ProjectFilterDto filterDto, PageableParams pagingParams, SortParameter sortParameters)
+        {
+            var filter = CreateFilter(filterDto);
+
+            return await _projectRepository.GetPagedWithFilterAndProjectToAsync<ProjectFilterDto>(
+                filter, pagingParams, sortParameters, nameof(DatasourceConstants.DesignCategory)
+            );
+        }
+
+        private static Expression<Func<Project, bool>> CreateFilter(ProjectFilterDto filterDto)
+        {
+            var predicate = PredicateBuilder.True<Project>();
+
+            if (!string.IsNullOrEmpty(filterDto.Title))
+            {
+                predicate = predicate.And(x => x.Title.Contains(filterDto.Title));
+            }
+
+            return predicate;
+        }
+
+
     }
 }

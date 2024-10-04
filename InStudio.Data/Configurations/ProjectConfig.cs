@@ -16,9 +16,8 @@ namespace InStudio.Data.Configurations
         {
 
             entity
-                .HasNoKey()
                 .ToTable("Project");
-
+            entity.HasKey(e => e.Id);
             entity.Property(e => e.CreatedDate).HasColumnType("datetime");
             entity.Property(e => e.Description).IsUnicode(false);
             entity.Property(e => e.DesignerFeedback).IsUnicode(false);

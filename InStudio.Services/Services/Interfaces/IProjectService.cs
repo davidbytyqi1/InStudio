@@ -1,4 +1,6 @@
-﻿using InStudio.Services.Dtos.Project;
+﻿using InStudio.Common.Types;
+using InStudio.Common;
+using InStudio.Services.Dtos.Project;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,5 +17,6 @@ namespace InStudio.Services.Services.Interfaces
         Task<ProjectDto> GetProjectByIdAsync(int projectId);
         Task UpdateProjectAsync(UpdateProjectDto dto);
         Task DeleteProjectAsync(int projectId);
+        Task<PagedReadOnlyCollection<ProjectFilterDto>> GetProjectListAsync(ProjectFilterDto filterDto, PageableParams pagingParams, SortParameter sortParameters);
     }
 }

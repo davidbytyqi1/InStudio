@@ -1,5 +1,11 @@
-﻿using InStudio.Services.Dtos.Project;
+﻿using InStudio.Attributes;
+using InStudio.Extensions;
+using InStudio.Filters.Requests.Project;
+using InStudio.Filters.Response.Project;
+using InStudio.Filters.Response.UserSubscriptionType;
+using InStudio.Services.Dtos.Project;
 using InStudio.Services.Services.Interfaces;
+using Mapster;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -14,10 +20,11 @@ namespace InStudio.Controllers
     public class ProjectController : ControllerBase
     {
         private readonly IProjectService _projectService;
-
-        public ProjectController(IProjectService projectService)
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        public ProjectController(IProjectService projectService, IHttpContextAccessor httpContextAccessor)
         {
             _projectService = projectService;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         [HttpGet]
@@ -27,7 +34,6 @@ namespace InStudio.Controllers
             var user = HttpContext.User;
             var roles = user.Claims.Where(c => c.Type == ClaimTypes.Role).Select(c => c.Value).ToList();
 
-            // Print roles for debugging
             foreach (var role in roles)
             {
                 Console.WriteLine(role);
@@ -85,6 +91,19 @@ namespace InStudio.Controllers
 
             await _projectService.DeleteProjectAsync(id);
             return NoContent();
+        }
+
+        [HttpGet("Filter")]
+        [PageableAndSortable]
+        [AllowAnonymous]
+        public async Task<IActionResult> GetProjects([FromQuery] ProjectFilterRequest model)
+        {
+            var projects = await _projectService.GetProjectListAsync(
+                model.Adapt<ProjectFilterDto>(),
+                _httpContextAccessor.GetPageableParams(),
+                _httpContextAccessor.GetSortParams<ProjctFilterResponse>());
+
+            return projects.TotalCount > 0 ? new OkObjectResult(new { Data = projects.Adapt<IList<ProjctFilterResponse>>(), Count = projects.TotalCount }) : new NoContentResult();
         }
     }
 }

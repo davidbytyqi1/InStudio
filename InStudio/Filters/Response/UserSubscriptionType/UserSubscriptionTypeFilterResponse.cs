@@ -1,9 +1,9 @@
 ﻿using InStudio.Attributes;
 using System.ComponentModel.DataAnnotations;
 
-namespace InStudio.Filters.Requests
+namespace InStudio.Filters.Response.UserSubscriptionType
 {
-    public sealed record SearchUserSubscriptionTypeResponse
+    internal sealed record UserSubscriptionTypeFilterResponse
     {
         [Required]
         public string Id { get; init; } = default!;
