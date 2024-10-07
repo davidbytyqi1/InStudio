@@ -31,5 +31,9 @@ namespace InStudio.Data.Models
         public string? DesignerFeedback { get; set; }
 
         public virtual DesignCategory? DesignCategory { get; set; }
+
+        public virtual ICollection<ProjectImage> ProjectImages { get; set; } = new List<ProjectImage>();
+
+        public virtual ICollection<ProjectOffer> ProjectOffers { get; set; } = new List<ProjectOffer>();
     }
 }

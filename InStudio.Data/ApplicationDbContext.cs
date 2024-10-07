@@ -23,6 +23,11 @@ namespace InStudio.Data
 
         public virtual DbSet<Message> Messages { get; set; }
 
+        public virtual DbSet<ProjectImage> ProjectImages { get; set; }
+
+        public virtual DbSet<ProjectOffer> ProjectOffers { get; set; }
+
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -31,6 +36,8 @@ namespace InStudio.Data
             modelBuilder.ApplyConfiguration(new UserSubscriptionTypeConfig());
             modelBuilder.ApplyConfiguration(new ProjectConfig());
             modelBuilder.ApplyConfiguration(new MessageConfig());
+            modelBuilder.ApplyConfiguration(new ProjectImageConfig());
+            modelBuilder.ApplyConfiguration(new ProjectOfferConfig());
         }
     }
 }

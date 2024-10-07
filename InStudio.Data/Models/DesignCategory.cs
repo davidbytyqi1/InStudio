@@ -24,4 +24,6 @@ public partial class DesignCategory
     public virtual ICollection<DesignCategory> InverseParent { get; set; } = new List<DesignCategory>();
 
     public virtual DesignCategory? Parent { get; set; }
+
+    public virtual ICollection<Project> Projects { get; set; } = new List<Project>();
 }
