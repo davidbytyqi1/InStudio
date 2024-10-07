@@ -11,6 +11,8 @@ namespace InStudio.Services
         DesignCategory,
         Project,
         UserSubscriptionType,
-        User
+        User,
+        ProjectOffer,
+        ProjectImage
     }
 }

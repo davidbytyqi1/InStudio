@@ -296,3 +296,4 @@ C:\Users\User\Desktop\Project\InStudio\InStudio\bin\Debug\net8.0\Microsoft.AspNe
 C:\Users\User\Desktop\Project\InStudio\InStudio\bin\Debug\net8.0\System.Linq.Dynamic.Core.dll
 C:\Users\User\Desktop\Project\InStudio\InStudio\bin\Debug\net8.0\InStudio.Common.dll
 C:\Users\User\Desktop\Project\InStudio\InStudio\bin\Debug\net8.0\InStudio.Common.pdb
+C:\Users\User\Desktop\Project\InStudio\InStudio\obj\Debug\net8.0\InStudio.MvcApplicationPartsAssemblyInfo.cs

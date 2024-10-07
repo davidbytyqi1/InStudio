@@ -115,6 +115,8 @@ builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
 builder.Services.AddScoped<IProjectService, ProjectService>();
 builder.Services.AddScoped<IMessageRepository, MessageRepository>();
 builder.Services.AddScoped<IMessageService, MessageService>();
+builder.Services.AddScoped<IProjectOfferRepository, ProjectOfferRepository>();
+builder.Services.AddScoped<IProjectOfferService, ProjectOfferService>();
 
 
 
