@@ -105,8 +105,6 @@ namespace InStudio.Services.Services
             await _projectImageRepository.SaveChangesAsync();
         }
 
-
-
         public async Task DeleteProjectImageAsync(int id)
         {
             var projectImage = await _projectImageRepository.FindAsync(x => x.Id == id);

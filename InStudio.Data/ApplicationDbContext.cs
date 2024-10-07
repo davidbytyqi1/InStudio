@@ -27,6 +27,7 @@ namespace InStudio.Data
 
         public virtual DbSet<ProjectOffer> ProjectOffers { get; set; }
 
+        public virtual DbSet<UserProfile> UserProfiles { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -38,6 +39,7 @@ namespace InStudio.Data
             modelBuilder.ApplyConfiguration(new MessageConfig());
             modelBuilder.ApplyConfiguration(new ProjectImageConfig());
             modelBuilder.ApplyConfiguration(new ProjectOfferConfig());
+            modelBuilder.ApplyConfiguration(new UserProfileConfig());
         }
     }
 }
