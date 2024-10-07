@@ -1,4 +1,6 @@
 ﻿using InStudio.Extensions;
+using InStudio.Filters.Requests.UserProfileDesignCategory;
+using InStudio.Filters.Response.UserProfileDesignCategory;
 using InStudio.Services.Dtos.UserProfileDesignCategory;
 using InStudio.Services.Services.Interfaces;
 using Mapster;
@@ -94,14 +96,14 @@ namespace InStudio.Controllers
 
         [HttpGet("Filter")]
         [AllowAnonymous]
-        public async Task<IActionResult> GetUserProfileDesignCategories([FromQuery] UserProfileDesignCategoryFilterDto filterDto)
+        public async Task<IActionResult> GetUserProfileDesignCategories([FromQuery] UserProfileDesignFilterCategory filterDto)
         {
             var categories = await _userProfileDesignCategoryService.GetUserProfileDesignCategoryListAsync(
-                filterDto,
+                filterDto.Adapt<UserProfileDesignCategoryFilterDto>(),
                 _httpContextAccessor.GetPageableParams(),
-                _httpContextAccessor.GetSortParams<UserProfileDesignCategoryDto>());
+                _httpContextAccessor.GetSortParams<UserProfileDesignCategoryFilterResponse>());
 
-            return categories.TotalCount > 0 ? new OkObjectResult(new { Data = categories.Adapt<IList<UserProfileDesignCategoryDto>>(), Count = categories.TotalCount }) : new NoContentResult();
+            return categories.TotalCount > 0 ? new OkObjectResult(new { Data = categories.Adapt<IList<UserProfileDesignCategoryFilterResponse>>(), Count = categories.TotalCount }) : new NoContentResult();
         }
     }
 }
