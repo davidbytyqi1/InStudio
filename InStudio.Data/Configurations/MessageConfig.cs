@@ -14,13 +14,10 @@ namespace InStudio.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<Message> entity)
         {
-
             entity.Property(e => e.CreatedDate).HasColumnType("datetime");
             entity.Property(e => e.Text)
                 .HasMaxLength(500)
                 .IsUnicode(false);
-
-
         }
     }
 }
