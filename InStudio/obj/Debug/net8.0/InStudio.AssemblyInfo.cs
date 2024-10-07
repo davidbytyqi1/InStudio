@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("InStudio")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+414f495e0af5ef28f4de4a93496b1ee77595a0ad")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3eecd306bf7d4d74b1ea1baa648d700cb4af5cbf")]
 [assembly: System.Reflection.AssemblyProductAttribute("InStudio")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InStudio")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

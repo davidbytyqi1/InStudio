@@ -9,6 +9,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using InStudio.Data;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using Microsoft.AspNetCore.Authentication;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,7 +25,7 @@ builder.Services.AddAuthorization();
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = IdentityConstants.ApplicationScheme;
-    options.DefaultChallengeScheme = IdentityConstants.ApplicationScheme;
+    options.DefaultChallengeScheme = IdentityConstants.BearerScheme;
 });
 builder.Services.AddAuthentication(IdentityConstants.ApplicationScheme)
         .AddCookie(IdentityConstants.ApplicationScheme, options =>
@@ -41,7 +44,32 @@ builder.Services.AddAuthentication(IdentityConstants.ApplicationScheme)
                     identity.AddClaims(claims);
                 }
             };
+        }).AddBearerToken(IdentityConstants.BearerScheme, options =>
+        {
+            options.Events.OnMessageReceived = async context =>
+            {
+                // Extract token from Authorization header (Bearer)
+                var token = context.Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
+
+                var userManager = context.HttpContext.RequestServices.GetRequiredService<UserManager<User>>();
+                var user = await userManager.FindByIdAsync("userId"); 
+                var isValid = await userManager.VerifyUserTokenAsync(user, TokenOptions.DefaultProvider, "CustomPurpose", token);
+
+                if (isValid)
+                {
+                    // If the token is valid, authenticate the request
+                    var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, user.UserName),
+                    new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
+                };
+
+                    var identity = new ClaimsIdentity(claims, IdentityConstants.BearerScheme);
+                    context.Principal = new ClaimsPrincipal(identity);
+                }
+            };
         });
+
 
 builder.Services.AddIdentityCore<User>(options =>
 {
@@ -80,6 +108,36 @@ builder.Services.AddScoped<IUserSubscriptionTypeRepository, UserSubscriptionType
 builder.Services.AddScoped<IUserSubscriptionTypeService, UserSubscriptionTypeService>();
 builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
 builder.Services.AddScoped<IProjectService, ProjectService>();
+
+
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "API", Version = "v1" });
+
+    c.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+    {
+        In = Microsoft.OpenApi.Models.ParameterLocation.Header,
+        Description = "Please enter token as: Bearer {token}",
+        Name = "Authorization",
+        Type = Microsoft.OpenApi.Models.SecuritySchemeType.ApiKey,
+        Scheme = "Bearer"
+    });
+
+    c.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
+    {
+        {
+            new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+            {
+                Reference = new Microsoft.OpenApi.Models.OpenApiReference
+                {
+                    Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            Array.Empty<string>()
+        }
+    });
+});
 
 
 var app = builder.Build();
