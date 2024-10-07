@@ -26,4 +26,6 @@ public partial class DesignCategory
     public virtual DesignCategory? Parent { get; set; }
 
     public virtual ICollection<Project> Projects { get; set; } = new List<Project>();
+
+    public virtual ICollection<UserProfileDesignCategory> UserProfileDesignCategories { get; set; } = new List<UserProfileDesignCategory>();
 }

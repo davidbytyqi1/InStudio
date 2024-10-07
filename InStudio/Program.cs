@@ -119,6 +119,10 @@ builder.Services.AddScoped<IProjectOfferRepository, ProjectOfferRepository>();
 builder.Services.AddScoped<IProjectOfferService, ProjectOfferService>();
 builder.Services.AddScoped<IProjectImageRepository, ProjectImageRepository>();
 builder.Services.AddScoped<IProjectImageService, ProjectImageService>();
+builder.Services.AddScoped<IUserProfileRepository, UserProfileRepository>();
+builder.Services.AddScoped<IUserProfileService, UserProfileService>();
+builder.Services.AddScoped<IUserProfileDesignCategoryRepository, UserProfileDesignCategoryRepository>();
+builder.Services.AddScoped<IUserProfileDesignCategoryService, UserProfileDesignCategoryService>();
 
 
 
