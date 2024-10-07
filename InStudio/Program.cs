@@ -12,13 +12,18 @@ using InStudio.Data;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.AspNetCore.Authentication;
+using InStudio.Common.Services;
+using InStudio.Common.Services.Interfaces;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using InStudio.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddScoped<IScopeContext, ScopeContext>();
+builder.Services.AddScoped<IScopeContextSetter, ScopeContext>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddAuthorization();
@@ -48,16 +53,16 @@ builder.Services.AddAuthentication(IdentityConstants.ApplicationScheme)
         {
             options.Events.OnMessageReceived = async context =>
             {
-                // Extract token from Authorization header (Bearer)
                 var token = context.Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
 
                 var userManager = context.HttpContext.RequestServices.GetRequiredService<UserManager<User>>();
                 var user = await userManager.FindByIdAsync("userId"); 
                 var isValid = await userManager.VerifyUserTokenAsync(user, TokenOptions.DefaultProvider, "CustomPurpose", token);
-
+              
+                var scopeContextSetter = context.HttpContext.RequestServices.GetRequiredService<IScopeContextSetter>();
+                scopeContextSetter.SetUser(Guid.Parse(user.Id), user.UserName);
                 if (isValid)
                 {
-                    // If the token is valid, authenticate the request
                     var claims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name, user.UserName),
@@ -110,6 +115,7 @@ builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
 builder.Services.AddScoped<IProjectService, ProjectService>();
 
 
+
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "API", Version = "v1" });
@@ -141,6 +147,7 @@ builder.Services.AddSwaggerGen(c =>
 
 
 var app = builder.Build();
+    // Seed roles: User, Designer, Admin
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -157,5 +164,56 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapIdentityApi<User>();
+app.Lifetime.ApplicationStarted.Register(async () =>
+{
+    using var scope = app.Services.CreateScope();
+    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+
+    if (!await roleManager.RoleExistsAsync("User"))
+    {
+        await roleManager.CreateAsync(new IdentityRole("User"));
+    }
+    if (!await roleManager.RoleExistsAsync("Designer"))
+    {
+        await roleManager.CreateAsync(new IdentityRole("Designer"));
+    }
+    if (!await roleManager.RoleExistsAsync("Admin"))
+    {
+        await roleManager.CreateAsync(new IdentityRole("Admin"));
+    }
+});
+
+
+app.MapPost("/registerWithRole", async (UserManager<User> userManager, RoleManager<IdentityRole> roleManager, RegisterDto model) =>
+{
+    if (model == null || string.IsNullOrWhiteSpace(model.Email) || string.IsNullOrWhiteSpace(model.Password))
+    {
+        return Results.BadRequest("Invalid registration details.");
+    }
+
+    var user = new User { UserName = model.Email, Email = model.Email };
+    var result = await userManager.CreateAsync(user, model.Password);
+
+    if (result.Succeeded)
+    {
+        var roleToAssign = model.Role switch
+        {
+            "Designer" => "Designer",
+            "Admin" => "Admin",
+            _ => "User"
+        };
+
+        var roleResult = await userManager.AddToRoleAsync(user, roleToAssign);
+
+        if (!roleResult.Succeeded)
+        {
+            return Results.BadRequest("Failed to assign role.");
+        }
+
+        return Results.Ok("User registered and role assigned successfully.");
+    }
+
+    return Results.BadRequest(result.Errors);
+});
 
 app.Run();

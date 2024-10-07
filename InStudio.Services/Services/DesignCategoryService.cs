@@ -1,46 +1,29 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System.Security.Claims;
-using InStudio.Services.Repositories.Interfaces;
-using InStudio.Services.Services.Interfaces;
+﻿using InStudio.Services.Repositories.Interfaces;
 using InStudio.Services.Dtos.DesignCategory;
 using Mapster;
 using InStudio.Data.Models;
-using Microsoft.AspNetCore.Http;
+using InStudio.Common.Services.Interfaces;
+using InStudio.Services.Services.Interfaces;
 
 namespace InStudio.Services.Services
 {
     public class DesignCategoryService : IDesignCategoryService
     {
         private readonly IDesignCategoryRepository _designCategoryRepository;
-        private readonly UserManager<User> _userManager;
-        private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly IScopeContext _scopeContext;
 
         public DesignCategoryService(
             IDesignCategoryRepository designCategoryRepository,
-            UserManager<User> userManager,
-            IHttpContextAccessor httpContextAccessor)
+            IScopeContext scopeContext)
         {
             _designCategoryRepository = designCategoryRepository;
-            _userManager = userManager;
-            _httpContextAccessor = httpContextAccessor;
-        }
-
-        private async Task<Guid> GetCurrentUserIdAsync()
-        {
-            var user = _httpContextAccessor.HttpContext?.User;
-            if (user == null)
-            {
-                throw new UnauthorizedAccessException("User is not logged in.");
-            }
-
-            var identityUser = await _userManager.GetUserAsync(user);
-            return identityUser != null ? Guid.Parse(identityUser.Id) : throw new UnauthorizedAccessException("User is not logged in.");
+            _scopeContext = scopeContext;
         }
 
         public async Task<DesignCategoryDto> CreateCategoryAsync(CreateDesignCategoryDto dto)
         {
             var categoryEntity = dto.Adapt<DesignCategory>();
-            categoryEntity.CreatedBy = await GetCurrentUserIdAsync();
+            categoryEntity.CreatedBy = _scopeContext.UserId;
             categoryEntity.CreatedDate = DateTime.UtcNow;
 
             await _designCategoryRepository.AddAsync(categoryEntity);
@@ -75,7 +58,7 @@ namespace InStudio.Services.Services
             }
 
             dto.Adapt(existingCategory);
-            existingCategory.UpdatedBy = await GetCurrentUserIdAsync();
+            existingCategory.UpdatedBy = _scopeContext.UserId;
             existingCategory.UpdatedDate = DateTime.UtcNow;
 
             _designCategoryRepository.Update(existingCategory);

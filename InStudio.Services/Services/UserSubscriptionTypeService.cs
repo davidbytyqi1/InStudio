@@ -1,52 +1,36 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System.Security.Claims;
+﻿using InStudio.Common.Types;
+using InStudio.Common.Services.Interfaces;
+using InStudio.Data.Models;
+using InStudio.Services.Dtos.UserSubscriptionType;
+using InStudio.Services.Repositories;
 using InStudio.Services.Repositories.Interfaces;
 using InStudio.Services.Services.Interfaces;
-using InStudio.Services.Dtos.UserSubscriptionType;
 using Mapster;
-using InStudio.Data.Models;
-using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
-using InStudio.Common.Types;
-using InStudio.Common;
 using System.Linq.Expressions;
+using System.Threading.Tasks;
+using InStudio.Common;
 
 namespace InStudio.Services.Services
 {
     public class UserSubscriptionTypeService : IUserSubscriptionTypeService
     {
         private readonly IUserSubscriptionTypeRepository _userSubscriptionTypeRepository;
-        private readonly UserManager<User> _userManager;
-        private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly IScopeContext _scopeContext;
 
         public UserSubscriptionTypeService(
             IUserSubscriptionTypeRepository userSubscriptionTypeRepository,
-            UserManager<User> userManager,
-            IHttpContextAccessor httpContextAccessor)
+            IScopeContext scopeContext)
         {
             _userSubscriptionTypeRepository = userSubscriptionTypeRepository;
-            _userManager = userManager;
-            _httpContextAccessor = httpContextAccessor;
-        }
-
-        private async Task<Guid> GetCurrentUserIdAsync()
-        {
-            var user = _httpContextAccessor.HttpContext?.User;
-            if (user == null)
-            {
-                throw new UnauthorizedAccessException("User is not logged in.");
-            }
-
-            var identityUser = await _userManager.GetUserAsync(user);
-            return identityUser != null ? Guid.Parse(identityUser.Id) : throw new UnauthorizedAccessException("User is not logged in.");
+            _scopeContext = scopeContext;
         }
 
         public async Task<UserSubscriptionTypeDto> CreateSubscriptionTypeAsync(CreateUserSubscriptionTypeDto dto)
         {
             var subscriptionTypeEntity = dto.Adapt<UserSubscriptionType>();
-            subscriptionTypeEntity.CreatedBy = await GetCurrentUserIdAsync();
+            subscriptionTypeEntity.CreatedBy = _scopeContext.UserId;
             subscriptionTypeEntity.CreatedDate = DateTime.UtcNow;
 
             await _userSubscriptionTypeRepository.AddAsync(subscriptionTypeEntity);
@@ -81,7 +65,7 @@ namespace InStudio.Services.Services
             }
 
             dto.Adapt(existingSubscriptionType);
-            existingSubscriptionType.UpdatedBy = await GetCurrentUserIdAsync();
+            existingSubscriptionType.UpdatedBy = _scopeContext.UserId;
             existingSubscriptionType.UpdatedDate = DateTime.UtcNow;
 
             _userSubscriptionTypeRepository.Update(existingSubscriptionType);
@@ -104,7 +88,7 @@ namespace InStudio.Services.Services
             UserSubscriptionTypeFilterDto filterDto,
             PageableParams pagingParams,
             SortParameter sortParameters)
-        {          
+        {
             var filter = CreateFilter(filterDto);
 
             return await _userSubscriptionTypeRepository.GetPagedWithFilterAndProjectToAsync<UserSubscriptionTypeFilterDto>(

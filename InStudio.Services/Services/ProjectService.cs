@@ -1,5 +1,5 @@
 ﻿using InStudio.Common.Types;
-using InStudio.Common;
+using InStudio.Common.Services.Interfaces;
 using InStudio.Data.Models;
 using InStudio.Services.Dtos.Project;
 using InStudio.Services.Dtos.UserSubscriptionType;
@@ -7,49 +7,32 @@ using InStudio.Services.Repositories;
 using InStudio.Services.Repositories.Interfaces;
 using InStudio.Services.Services.Interfaces;
 using Mapster;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 using System.Threading.Tasks;
+using InStudio.Common;
 
 namespace InStudio.Services.Services
 {
     public class ProjectService : IProjectService
     {
         private readonly IProjectRepository _projectRepository;
-        private readonly UserManager<User> _userManager;
-        private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly IScopeContext _scopeContext;
 
         public ProjectService(
             IProjectRepository projectRepository,
-            UserManager<User> userManager,
-            IHttpContextAccessor httpContextAccessor)
+            IScopeContext scopeContext)
         {
             _projectRepository = projectRepository;
-            _userManager = userManager;
-            _httpContextAccessor = httpContextAccessor;
-        }
-
-        private async Task<Guid> GetCurrentUserIdAsync()
-        {
-            var user = _httpContextAccessor.HttpContext?.User;
-            if (user == null)
-            {
-                throw new UnauthorizedAccessException("User is not logged in.");
-            }
-
-            var identityUser = await _userManager.GetUserAsync(user);
-            return identityUser != null ? Guid.Parse(identityUser.Id) : throw new UnauthorizedAccessException("User is not logged in.");
+            _scopeContext = scopeContext;
         }
 
         public async Task<ProjectDto> CreateProjectAsync(CreateProjectDto dto)
         {
             var projectEntity = dto.Adapt<Project>();
-            projectEntity.CreatedBy = await GetCurrentUserIdAsync();
+            projectEntity.CreatedBy = _scopeContext.UserId;
             projectEntity.CreatedDate = DateTime.UtcNow;
 
             await _projectRepository.AddAsync(projectEntity);
@@ -84,7 +67,7 @@ namespace InStudio.Services.Services
             }
 
             dto.Adapt(existingProject);
-            existingProject.UpdatedBy = await GetCurrentUserIdAsync();
+            existingProject.UpdatedBy = _scopeContext.UserId;
             existingProject.UpdatedDate = DateTime.UtcNow;
 
             _projectRepository.Update(existingProject);
@@ -122,7 +105,5 @@ namespace InStudio.Services.Services
 
             return predicate;
         }
-
-
     }
 }
