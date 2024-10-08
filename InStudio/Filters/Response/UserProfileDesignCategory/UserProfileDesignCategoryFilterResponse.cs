@@ -17,6 +17,9 @@ namespace InStudio.Filters.Response.UserProfileDesignCategory
         [Required]
         [SortableColumn(Name = "DesignCategoryId")]
         public int? DesignCategoryId { get; set; }
+        [Required]
+        [SortableColumn(Name = "Username")]
+        public string Username { get; set; }
 
         public required DesignCategoryFilterResponse DesignCategory { get; set; }
     }

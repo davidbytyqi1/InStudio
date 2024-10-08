@@ -4,6 +4,7 @@
     {
         public int? UserProfileId { get; set; }
         public required string Title { get; set; }
+        public required string Username { get; set; }
         public int? DesignCategoryId { get; set; }
     }
 }

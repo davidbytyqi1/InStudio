@@ -11,6 +11,7 @@ namespace InStudio.Services.Dtos.UserProfile
         public int Id { get; set; }
         public Guid? UserId { get; set; }
         public string? Title { get; set; }
+        public required string Username { get; set; }
         public string? Description { get; set; }
         public decimal? Rate { get; set; }
         public string? ImagePath { get; set; }
