@@ -31,6 +31,10 @@ namespace InStudio.Data.Configurations
             entity.HasOne(d => d.DesignCategory).WithMany(p => p.Projects)
                 .HasForeignKey(d => d.DesignCategoryId)
                 .HasConstraintName("FK_Project_DesignCategory");
+
+            entity.HasOne(d => d.UserProfile).WithMany(p => p.Projects)
+                .HasForeignKey(d => d.UserProfileId)
+                .HasConstraintName("FK_Project_UserProfile1");
         }
     }
 }

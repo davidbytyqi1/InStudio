@@ -106,9 +106,9 @@ namespace InStudio.Services.Services
                 predicate = predicate.And(x => x.DesignCategoryId == filterDto.DesignCategoryId);
             }
 
-            if (filterDto.UserId.HasValue)
+            if (filterDto.UserProfileId.HasValue)
             {
-                predicate = predicate.And(x => x.UserId == filterDto.UserId);
+                predicate = predicate.And(x => x.UserProfileId == filterDto.UserProfileId);
             }
 
             return predicate;

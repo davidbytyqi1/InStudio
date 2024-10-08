@@ -18,8 +18,6 @@ public partial class UserProfile
 
     public string? ImagePath { get; set; }
 
-    public bool? IsAgency { get; set; }
-
     public Guid CreatedBy { get; set; }
 
     public DateTime CreatedDate { get; set; }
@@ -29,7 +27,13 @@ public partial class UserProfile
     public Guid? UpdatedBy { get; set; }
 
     public DateTime? UpdatedDate { get; set; }
+
+    public bool? IsAgency { get; set; }
+
+    public virtual ICollection<Project> Projects { get; set; } = new List<Project>();
+
     public virtual ICollection<UserEducation> UserEducations { get; set; } = new List<UserEducation>();
 
     public virtual ICollection<UserExperience> UserExperiences { get; set; } = new List<UserExperience>();
+    public virtual ICollection<UserProfileDesignCategory> UserProfileDesignCategory { get; set; } = new List<UserProfileDesignCategory>();
 }

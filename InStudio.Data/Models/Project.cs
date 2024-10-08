@@ -12,6 +12,8 @@ namespace InStudio.Data.Models
 
         public int? DesignCategoryId { get; set; }
 
+        public int? UserProfileId { get; set; }
+
         public string? Title { get; set; }
 
         public string? Description { get; set; }
@@ -35,5 +37,7 @@ namespace InStudio.Data.Models
         public virtual ICollection<ProjectImage> ProjectImages { get; set; } = new List<ProjectImage>();
 
         public virtual ICollection<ProjectOffer> ProjectOffers { get; set; } = new List<ProjectOffer>();
+
+        public virtual UserProfile? UserProfile { get; set; }
     }
 }

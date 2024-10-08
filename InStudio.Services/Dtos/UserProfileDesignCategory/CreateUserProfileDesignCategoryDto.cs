@@ -8,7 +8,7 @@ namespace InStudio.Services.Dtos.UserProfileDesignCategory
 {
     public class CreateUserProfileDesignCategoryDto
     {
-        public Guid? UserId { get; set; }
+        public int UserProfileId { get; set; }
         public int? DesignCategoryId { get; set; }
         public string? Description { get; set; }
     }

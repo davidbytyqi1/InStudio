@@ -25,6 +25,10 @@ namespace InStudio.Data.Configurations
             entity.HasOne(d => d.DesignCategory).WithMany(p => p.UserProfileDesignCategories)
                 .HasForeignKey(d => d.DesignCategoryId)
                 .HasConstraintName("FK_UserProfileDesignCategory_DesignCategory");
+            entity.HasOne(d => d.UserProfile)
+                .WithMany(p => p.UserProfileDesignCategory)
+                .HasForeignKey(d => d.UserProfileId)
+                .HasConstraintName("FK_UserProfileDesignCategory_UserProfile");
         }
     }
 }

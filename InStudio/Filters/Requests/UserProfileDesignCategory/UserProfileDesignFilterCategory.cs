@@ -2,7 +2,7 @@
 {
     public class UserProfileDesignFilterCategory
     {
-        public Guid? UserId { get; set; }
+        public int? UserProfileId { get; set; }
         public required string Title { get; set; }
         public int? DesignCategoryId { get; set; }
     }

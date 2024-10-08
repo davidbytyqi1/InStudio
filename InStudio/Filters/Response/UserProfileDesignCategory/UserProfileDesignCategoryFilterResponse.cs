@@ -8,8 +8,8 @@ namespace InStudio.Filters.Response.UserProfileDesignCategory
     internal class UserProfileDesignCategoryFilterResponse
     {
         [Required]
-        [SortableColumn(Name = "UserId")]
-        public Guid? UserId { get; set; }
+        [SortableColumn(Name = "UserProfileId")]
+        public int UserProfileId { get; set; }
         public string? Description { get; set; }
         [Required]
         [SortableColumn(Name = "Title")]

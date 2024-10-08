@@ -9,7 +9,7 @@ namespace InStudio.Services.Dtos.UserProfileDesignCategory
     public class UserProfileDesignCategoryDto
     {
         public int Id { get; set; }
-        public Guid? UserId { get; set; }
+        public int UserId { get; set; }
         public int? DesignCategoryId { get; set; }
         public string? Description { get; set; }
         public Guid CreatedBy { get; set; }

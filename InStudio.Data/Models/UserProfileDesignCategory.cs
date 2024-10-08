@@ -7,7 +7,7 @@ public partial class UserProfileDesignCategory
 {
     public int Id { get; set; }
 
-    public Guid? UserId { get; set; }
+    public int UserProfileId { get; set; }
 
     public int? DesignCategoryId { get; set; }
 
@@ -22,5 +22,6 @@ public partial class UserProfileDesignCategory
     public DateTime? UpdatedDate { get; set; }
 
     public virtual DesignCategory? DesignCategory { get; set; }
+    public virtual UserProfile UserProfile { get; set; }
 
 }
