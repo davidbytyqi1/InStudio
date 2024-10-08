@@ -15,6 +15,7 @@ namespace InStudio.Services.Dtos.UserProfile
         public decimal? Rate { get; set; }
         public string? ImagePath { get; set; }
         public int? ConnectionsNumber { get; set; }
+        public bool? IsAgency { get; set; }
         public Guid CreatedBy { get; set; }
         public DateTime CreatedDate { get; set; }
         public Guid? UpdatedBy { get; set; }

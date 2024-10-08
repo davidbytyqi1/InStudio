@@ -17,6 +17,8 @@ public partial class UserProfile
 
     public string? ImagePath { get; set; }
 
+    public bool? IsAgency { get; set; }
+
     public Guid CreatedBy { get; set; }
 
     public DateTime CreatedDate { get; set; }
