@@ -31,6 +31,10 @@ namespace InStudio.Data
 
         public virtual DbSet<UserProfileDesignCategory> UserProfileDesignCategories { get; set; }
 
+        public virtual DbSet<UserEducation> UserEducations { get; set; }
+
+        public virtual DbSet<UserExperience> UserExperiences { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -43,6 +47,8 @@ namespace InStudio.Data
             modelBuilder.ApplyConfiguration(new ProjectOfferConfig());
             modelBuilder.ApplyConfiguration(new UserProfileConfig());
             modelBuilder.ApplyConfiguration(new UserProfileDesignCategoryConfig());
+            modelBuilder.ApplyConfiguration(new UserEducationConfig());
+            modelBuilder.ApplyConfiguration(new UserExperienceConfig());
         }
     }
 }

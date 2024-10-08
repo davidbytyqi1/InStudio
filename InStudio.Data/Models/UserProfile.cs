@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InStudio.Data.Models;
+using System;
 using System.Collections.Generic;
 
 namespace InStudio.Data.Models;
@@ -28,4 +29,7 @@ public partial class UserProfile
     public Guid? UpdatedBy { get; set; }
 
     public DateTime? UpdatedDate { get; set; }
+    public virtual ICollection<UserEducation> UserEducations { get; set; } = new List<UserEducation>();
+
+    public virtual ICollection<UserExperience> UserExperiences { get; set; } = new List<UserExperience>();
 }

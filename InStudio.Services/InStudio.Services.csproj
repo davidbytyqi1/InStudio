@@ -17,4 +17,9 @@
     <ProjectReference Include="..\InStudio.Data\InStudio.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Dtos\UserExperience\" />
+    <Folder Include="Dtos\UserEducation\" />
+  </ItemGroup>
+
 </Project>
