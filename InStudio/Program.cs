@@ -123,6 +123,10 @@ builder.Services.AddScoped<IUserProfileRepository, UserProfileRepository>();
 builder.Services.AddScoped<IUserProfileService, UserProfileService>();
 builder.Services.AddScoped<IUserProfileDesignCategoryRepository, UserProfileDesignCategoryRepository>();
 builder.Services.AddScoped<IUserProfileDesignCategoryService, UserProfileDesignCategoryService>();
+builder.Services.AddScoped<IUserEducationRepository, UserEducationRepository>();
+builder.Services.AddScoped<IUserEducationService, UserEducationService>();
+builder.Services.AddScoped<IUserExperienceRepository, UserExperienceRepository>();
+builder.Services.AddScoped<IUserExperienceService, UserExperienceService>();
 
 
 
