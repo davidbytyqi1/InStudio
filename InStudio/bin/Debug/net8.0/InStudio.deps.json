@@ -16,7 +16,8 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.8",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.19.6",
-          "Swashbuckle.AspNetCore": "6.4.0"
+          "Swashbuckle.AspNetCore": "6.4.0",
+          "Yarp.ReverseProxy": "2.2.0"
         },
         "runtime": {
           "InStudio.dll": {}
@@ -887,6 +888,14 @@
           "System.Security.Principal.Windows": "5.0.0"
         }
       },
+      "System.IO.Hashing/8.0.0": {
+        "runtime": {
+          "lib/net8.0/System.IO.Hashing.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
+          }
+        }
+      },
       "System.IO.Pipelines/6.0.3": {},
       "System.Linq.Dynamic.Core/1.4.5": {
         "runtime": {
@@ -1005,6 +1014,17 @@
             "assetType": "runtime",
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "Yarp.ReverseProxy/2.2.0": {
+        "dependencies": {
+          "System.IO.Hashing": "8.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/Yarp.ReverseProxy.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.200.24.42901"
           }
         }
       },
@@ -1533,6 +1553,13 @@
       "path": "system.io.filesystem.accesscontrol/5.0.0",
       "hashPath": "system.io.filesystem.accesscontrol.5.0.0.nupkg.sha512"
     },
+    "System.IO.Hashing/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ne1843evDugl0md7Fjzy6QjJrzsjh46ZKbhf8GwBXb5f/gw97J4bxMs0NQKifDuThh/f0bZ0e62NPl1jzTuRqA==",
+      "path": "system.io.hashing/8.0.0",
+      "hashPath": "system.io.hashing.8.0.0.nupkg.sha512"
+    },
     "System.IO.Pipelines/6.0.3": {
       "type": "package",
       "serviceable": true,
@@ -1665,6 +1692,13 @@
       "sha512": "sha512-IXoJOXIqc39AIe+CIR7koBtRGMiCt/LPM3lI+PELtDIy9XdyeSrwXFdWV9dzJ2Awl0paLWUaknLxFQ5HpHZUog==",
       "path": "system.windows.extensions/6.0.0",
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
+    },
+    "Yarp.ReverseProxy/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-t16Z+OplJEElJy1Q6t12EwMGF2BeLw8IKjD1ema7ewbCRaMqeVIRPZo3MlxidnRFRK+tV6II8tKYX+7N5ZS98A==",
+      "path": "yarp.reverseproxy/2.2.0",
+      "hashPath": "yarp.reverseproxy.2.2.0.nupkg.sha512"
     },
     "InStudio.Common/1.0.0": {
       "type": "project",

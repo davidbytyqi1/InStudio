@@ -17,6 +17,7 @@ using InStudio.Common.Services.Interfaces;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using InStudio.Models;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -160,14 +161,34 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 
+builder.Services.AddReverseProxy()
+    .LoadFromConfig(builder.Configuration.GetSection("ReverseProxy"));
+
 var app = builder.Build();
+
+app.UseSwagger(c =>
+{
+    c.RouteTemplate = "swagger/{documentName}/swagger.json"; // Keeps default swagger.json route
+    c.PreSerializeFilters.Add((swagger, httpReq) =>
+    {
+        // Update Swagger's base URL to YARP's URL
+        swagger.Servers = new List<OpenApiServer>
+        {
+            new OpenApiServer { Url = $"{httpReq.Scheme}://localhost:5000" }
+        };
+    });
+});
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+});
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
     app.ApplyMigrations();
 }
-
+app.MapReverseProxy();
 app.MapControllers();
 
 app.UseHttpsRedirection();
