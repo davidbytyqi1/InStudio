@@ -13,6 +13,8 @@ namespace InStudio.Filters.Response.Project
         [SortableColumn(Name = "Title")]
         public string Title { get; init; } = default!;
 
+        public decimal? Price { get; set; }
+
         public string? Description { get; set; }
 
         public int? ConnectionsNumber { get; set; }

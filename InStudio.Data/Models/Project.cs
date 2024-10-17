@@ -12,6 +12,8 @@ namespace InStudio.Data.Models
 
         public int? DesignCategoryId { get; set; }
 
+        public decimal? Price { get; set; }
+
         public int? UserProfileId { get; set; }
 
         public string? Title { get; set; }
